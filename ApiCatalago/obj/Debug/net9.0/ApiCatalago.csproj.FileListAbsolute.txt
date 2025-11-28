@@ -129,3 +129,5 @@ C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\t
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\obj\Debug\net9.0\ApiCatalago.sourcelink.json
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\obj\Debug\net9.0\swae.build.ex.cache

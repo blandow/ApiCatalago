@@ -8,8 +8,8 @@ namespace ApiCatalago.Context
         public ApiCatalagoContext(DbContextOptions<ApiCatalagoContext> options): base(options)
         {
         }
-        DbSet<Categoria>? Categorias { get; set; }
-        DbSet<Produto>? Produtos { get; set; }
+        public DbSet<Categoria> ? Categorias { get; set; }
+        public DbSet<Produto> ? Produtos { get; set; }
     
     }
 }

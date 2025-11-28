@@ -4,11 +4,9 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 //Add Connections string and configure DbContext here
-string connection = builder.Configuration.GetConnectionString("DefaultConnection");
-
 builder.Services.AddDbContext<ApiCatalagoContext>(
     options =>
-        options.UseMySql(connection, ServerVersion.AutoDetect(connection))
+        options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection")))
 
     );
 
