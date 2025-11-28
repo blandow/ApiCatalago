@@ -1,0 +1,6 @@
+@ApiCatalago_HostAddress = http://localhost:5130
+
+GET {{ApiCatalago_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
