@@ -12,9 +12,6 @@ namespace ApiCatalago.Controllers
     public class ProdutosController : ControllerBase
     {
         private readonly ApiCatalagoContext _context;
-
-
-
         public ProdutosController(ApiCatalagoContext context)
         {
             _context = context;
