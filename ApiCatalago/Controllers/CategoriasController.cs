@@ -26,7 +26,7 @@ namespace ApiCatalago.Controllers
         [HttpGet("CategoriasProdutos")]
         public ActionResult<IEnumerable<Categoria>> GetCategoriaProdutos()
         {
-            return _context.Categorias.Include(c => c.Produtos).ToList();
+            return _context.Categorias.Include(c => c.Produtos).Where(c => c.Id <= 10 ).ToList();
         }
 
         [HttpGet("{id:int}", Name = "GetCategoriaId")]
