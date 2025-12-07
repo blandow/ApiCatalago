@@ -18,58 +18,93 @@ namespace ApiCatalago.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Produto>> Get() 
+        public ActionResult<IEnumerable<Produto>> Get()
         {
-            var produtos = _context.Produtos.AsNoTracking().ToList();
-            if(produtos is null)
-                return NotFound("Produtos não encontrados");
-            return produtos;
+            try
+            {
+                var produtos = _context.Produtos.AsNoTracking().ToList();
+                if (produtos is null)
+                    return NotFound("Produtos não encontrados");
+                return produtos;
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
+            }
         }
 
         [HttpGet("{id:int}", Name = "GetProduto")]
         public ActionResult<Produto> Get(int id)
         {
-            var produto = _context.Produtos.AsNoTracking().FirstOrDefault(p => p.Id == id);
-            if (produto is null)
-                return NotFound("Produto não existe");
-            return produto;
+            try
+            {
+                var produto = _context.Produtos.AsNoTracking().FirstOrDefault(p => p.Id == id);
+                if (produto is null)
+                    return NotFound("Produto não existe");
+                return produto;
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
+            }
         }
 
         [HttpPost]
         public ActionResult Post(Produto produto)
         {
-            if (produto is null)
-                return BadRequest();
-            
-            _context.Produtos.Add(produto);
-            _context.SaveChanges();
+            try
+            {
+                if (produto is null)
+                    return BadRequest();
 
-            return new CreatedAtRouteResult("GetProduto", new { id = produto.Id }, produto);
+                _context.Produtos.Add(produto);
+                _context.SaveChanges();
+
+                return new CreatedAtRouteResult("GetProduto", new { id = produto.Id }, produto);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
+            }
         }
 
         [HttpPut("{id:int}")]
         public ActionResult Put(int id, Produto produto)
         {
-            if (id != produto.Id)
-                return BadRequest();
+            try
+            {
+                if (id != produto.Id)
+                    return BadRequest();
 
-            _context.Entry(produto).State = EntityState.Modified;
-            _context.SaveChanges();
-            return Ok(produto);
+                _context.Entry(produto).State = EntityState.Modified;
+                _context.SaveChanges();
+                return Ok(produto);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
+            }
         }
 
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
-            var produto = _context.Produtos.FirstOrDefault(p => p.Id == id);
-            if (produto is null)
-                return NotFound("Id não encontrado");
-            
-            _context.Remove(produto);
-            _context.SaveChanges();
+            try
+            {
+                var produto = _context.Produtos.FirstOrDefault(p => p.Id == id);
+                if (produto is null)
+                    return NotFound("Id não encontrado");
 
-            return Ok(produto);
+                _context.Remove(produto);
+                _context.SaveChanges();
+
+                return Ok(produto);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
+            }
         }
-    
+
     }
 }
