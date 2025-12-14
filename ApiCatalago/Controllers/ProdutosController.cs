@@ -33,12 +33,44 @@ namespace ApiCatalago.Controllers
             }
         }
 
+        [HttpGet("GetAllProductAsync")]
+        public async Task<ActionResult<IEnumerable<Produto>>> GetAsync()
+        {
+            try
+            {
+                var produtos = await _context.Produtos.AsNoTracking().ToListAsync();
+                if (produtos is null)
+                    return NotFound("Produtos não encontrados");
+                return produtos;
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
+            }
+        }
+
         [HttpGet("{id:int}", Name = "GetProduto")]
         public ActionResult<Produto> Get(int id)
         {
             try
             {
                 var produto = _context.Produtos.AsNoTracking().FirstOrDefault(p => p.Id == id);
+                if (produto is null)
+                    return NotFound("Produto não existe");
+                return produto;
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
+            }
+        }
+
+        [HttpGet("GetProdutoAsync/{id:int:min(1)}", Name = "GetProduto")]
+        public async Task<ActionResult<Produto>> GetAsync(int id)
+        {
+            try
+            {
+                var produto = await _context.Produtos.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
                 if (produto is null)
                     return NotFound("Produto não existe");
                 return produto;

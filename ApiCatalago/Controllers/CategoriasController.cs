@@ -22,8 +22,24 @@ namespace ApiCatalago.Controllers
         {
             try
             {
-                return _context.Categorias.ToList();
+                return _context.Categorias.AsNoTracking().ToList();
 
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
+            }
+        }
+
+        [HttpGet("GetAllAsync")]
+        public async Task<ActionResult<IEnumerable<Categoria>>> GetAsync()
+        {
+            try
+            {
+                if(_context.Categorias is null)
+                    return NotFound("Categorias não encontradas");
+
+                return await _context.Categorias.AsNoTracking().ToListAsync();
             }
             catch (Exception e)
             {
@@ -44,12 +60,45 @@ namespace ApiCatalago.Controllers
             }
         }
 
+        [HttpGet("CategoriasProdutosAsync")]
+        public async Task<ActionResult<IEnumerable<Categoria>>> GetCategoriaProdutosAsync()
+        {
+            try
+            {
+                if (_context.Categorias is null)
+                    return NotFound("Categorias não encontradas");
+
+                return await _context.Categorias.Include(c => c.Produtos).Where(c => c.Id <= 10).ToListAsync();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
+            }
+        }
+
         [HttpGet("{id:int}", Name = "GetCategoriaId")]
         public ActionResult<Categoria> Get(int id)
         {
             try
             {
-                var categoria = _context.Categorias.FirstOrDefault(c => c.Id == id);
+                var categoria = _context.Categorias.AsNoTracking().FirstOrDefault(c => c.Id == id);
+                if (categoria is null)
+                    return NotFound($"id: {id} inválido");
+                return categoria;
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
+            }
+        }
+
+        [HttpGet("GetCategoriaIdAsync/{id:int:min(0)}", Name = "GetCategoriaIdAsync")]
+        public async Task<ActionResult<Categoria>> GetAsync(int id)
+        {
+            try
+            {
+                var categoria = await _context.Categorias.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
+
                 if (categoria is null)
                     return NotFound($"id: {id} inválido");
                 return categoria;
