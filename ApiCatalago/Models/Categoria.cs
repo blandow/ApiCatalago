@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using ApiCatalago.Validations;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
@@ -18,6 +19,7 @@ public class Categoria
     
     [Required]
     [StringLength(80)]
+    [UpperNameNotEmpty]
     public string? Nome { get; set; }
     [Required]
     [StringLength(300)]

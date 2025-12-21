@@ -65,7 +65,7 @@ namespace ApiCatalago.Controllers
             }
         }
 
-        [HttpGet("GetProdutoAsync/{id:int:min(1)}", Name = "GetProduto")]
+        [HttpGet("GetProdutoAsync/{id:int:min(1)}", Name = "GetProdutoAsync")]
         public async Task<ActionResult<Produto>> GetAsync(int id)
         {
             try
