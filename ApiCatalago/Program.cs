@@ -1,4 +1,5 @@
 using ApiCatalago.Context;
+using ApiCatalago.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -23,8 +24,11 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    
     app.MapOpenApi();
     app.UseSwaggerUI(options => options.SwaggerEndpoint("/openapi/v1.json", "Weather API"));
+    app.UseDeveloperExceptionPage();
+    app.ConfigureExceptionHandler();
 }
 
 app.UseHttpsRedirection();

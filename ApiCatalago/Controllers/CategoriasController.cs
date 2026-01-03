@@ -20,15 +20,20 @@ namespace ApiCatalago.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Categoria>> Get()
         {
+
+
             try
             {
                 return _context.Categorias.AsNoTracking().ToList();
 
             }
+
             catch (Exception e)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
+
             }
+
         }
 
         [HttpGet("GetAllAsync")]
@@ -36,7 +41,7 @@ namespace ApiCatalago.Controllers
         {
             try
             {
-                if(_context.Categorias is null)
+                if (_context.Categorias is null)
                     return NotFound("Categorias não encontradas");
 
                 return await _context.Categorias.AsNoTracking().ToListAsync();
