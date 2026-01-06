@@ -1,6 +1,7 @@
 using ApiCatalago.Context;
 using ApiCatalago.Extensions;
 using ApiCatalago.Filters;
+using ApiCatalago.Logging;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -14,8 +15,10 @@ builder.Services.AddDbContext<ApiCatalagoContext>(
     );
 
 // Add services to the container.
+
 builder.Services.AddScoped<APILoggingFilter>();
 builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration { logLevel = LogLevel.Information}));
 
 builder.Services.AddOpenApi();
 
