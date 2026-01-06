@@ -1,4 +1,5 @@
 ﻿using ApiCatalago.Context;
+using ApiCatalago.Filters;
 using ApiCatalago.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,7 @@ namespace ApiCatalago.Controllers
         }
 
         [HttpGet]
+        [ServiceFilter(typeof(APILoggingFilter))]
         public ActionResult<IEnumerable<Categoria>> Get()
         {
 

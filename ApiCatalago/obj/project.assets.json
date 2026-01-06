@@ -2893,23 +2893,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\felip\\.nuget\\packages\\": {},
+    "C:\\Users\\FelipeSiqueira\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\ApiCatalago.csproj",
+      "projectUniqueName": "D:\\OneDrive - Processware\\Área de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\ApiCatalago.csproj",
       "projectName": "ApiCatalago",
-      "projectPath": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\ApiCatalago.csproj",
-      "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\obj\\",
+      "projectPath": "D:\\OneDrive - Processware\\Área de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\ApiCatalago.csproj",
+      "packagesPath": "C:\\Users\\FelipeSiqueira\\.nuget\\packages\\",
+      "outputPath": "D:\\OneDrive - Processware\\Área de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\FelipeSiqueira\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
