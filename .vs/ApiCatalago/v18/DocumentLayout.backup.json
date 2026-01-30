@@ -1,65 +1,65 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\",
+  "WorkspaceRootPath": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\logging\\customlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\logging\\customlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\logging\\customlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\logging\\customloggerprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\logging\\customloggerprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\logging\\customloggerprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\logging\\customloggerproviderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\logging\\customloggerproviderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\logging\\customloggerproviderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\filters\\apiloggingfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\filters\\apiloggingfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\filters\\apiloggingfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\validations\\uppernamenotemptyattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\validations\\uppernamenotemptyattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\validations\\uppernamenotemptyattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\extensions\\apiexceptionmiddlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\extensions\\apiexceptionmiddlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\extensions\\apiexceptionmiddlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\apicatalago.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\apicatalago.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\apicatalago.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\models\\errordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\models\\errordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\models\\errordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|d:\\onedrive - processware\\\u00E1rea de trabalho\\pessoal\\nova pasta\\apicatalago\\apicatalago\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -70,21 +70,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CustomLogger.cs",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Logging\\CustomLogger.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Logging\\CustomLogger.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Logging\\CustomLogger.cs",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Logging\\CustomLogger.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Logging\\CustomLogger.cs",
               "RelativeToolTip": "ApiCatalago\\Logging\\CustomLogger.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAawDEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAawCYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-06T20:01:43.089Z",
               "EditorCaption": ""
@@ -93,61 +89,57 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "CustomLoggerProvider.cs",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Logging\\CustomLoggerProvider.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Logging\\CustomLoggerProvider.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Logging\\CustomLoggerProvider.cs",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Logging\\CustomLoggerProvider.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Logging\\CustomLoggerProvider.cs",
               "RelativeToolTip": "ApiCatalago\\Logging\\CustomLoggerProvider.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwBYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T20:01:14.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-06T20:01:14.678Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "CustomLoggerProviderConfiguration.cs",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Logging\\CustomLoggerProviderConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Logging\\CustomLoggerProviderConfiguration.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Logging\\CustomLoggerProviderConfiguration.cs",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Logging\\CustomLoggerProviderConfiguration.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Logging\\CustomLoggerProviderConfiguration.cs",
               "RelativeToolTip": "ApiCatalago\\Logging\\CustomLoggerProviderConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T20:00:35.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-06T20:00:35.409Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "CategoriasController.cs",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Controllers\\CategoriasController.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Controllers\\CategoriasController.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Controllers\\CategoriasController.cs",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Controllers\\CategoriasController.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Controllers\\CategoriasController.cs",
               "RelativeToolTip": "ApiCatalago\\Controllers\\CategoriasController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAIwBUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T21:23:59.061Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T21:23:59.061Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Program.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Program.cs",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Program.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Program.cs",
               "RelativeToolTip": "ApiCatalago\\Program.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAABQAAACAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T20:59:08.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T20:59:08.236Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "APILoggingFilter.cs",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Filters\\APILoggingFilter.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Filters\\APILoggingFilter.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Filters\\APILoggingFilter.cs",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Filters\\APILoggingFilter.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Filters\\APILoggingFilter.cs",
               "RelativeToolTip": "ApiCatalago\\Filters\\APILoggingFilter.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAQwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -157,9 +149,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\appsettings.json",
               "RelativeDocumentMoniker": "ApiCatalago\\appsettings.json",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\appsettings.json",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\appsettings.json",
               "RelativeToolTip": "ApiCatalago\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -169,9 +161,9 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "ApiExceptionMiddlewareExtensions.cs",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Extensions\\ApiExceptionMiddlewareExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Extensions\\ApiExceptionMiddlewareExtensions.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Extensions\\ApiExceptionMiddlewareExtensions.cs",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Extensions\\ApiExceptionMiddlewareExtensions.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Extensions\\ApiExceptionMiddlewareExtensions.cs",
               "RelativeToolTip": "ApiCatalago\\Extensions\\ApiExceptionMiddlewareExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -181,9 +173,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Properties\\launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "ApiCatalago\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Properties\\launchSettings.json",
               "RelativeToolTip": "ApiCatalago\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -193,9 +185,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "Produto.cs",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Models\\Produto.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Models\\Produto.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Models\\Produto.cs",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Models\\Produto.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Models\\Produto.cs",
               "RelativeToolTip": "ApiCatalago\\Models\\Produto.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAkwBcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -205,9 +197,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "UpperNameNotEmptyAttribute.cs",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Validations\\UpperNameNotEmptyAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Validations\\UpperNameNotEmptyAttribute.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Validations\\UpperNameNotEmptyAttribute.cs",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Validations\\UpperNameNotEmptyAttribute.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Validations\\UpperNameNotEmptyAttribute.cs",
               "RelativeToolTip": "ApiCatalago\\Validations\\UpperNameNotEmptyAttribute.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -217,9 +209,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "ProdutosController.cs",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Controllers\\ProdutosController.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Controllers\\ProdutosController.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Controllers\\ProdutosController.cs",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Controllers\\ProdutosController.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Controllers\\ProdutosController.cs",
               "RelativeToolTip": "ApiCatalago\\Controllers\\ProdutosController.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAAAowCMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -229,9 +221,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "ApiCatalago.csproj",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\ApiCatalago.csproj",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\ApiCatalago.csproj",
               "RelativeDocumentMoniker": "ApiCatalago\\ApiCatalago.csproj",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\ApiCatalago.csproj",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\ApiCatalago.csproj",
               "RelativeToolTip": "ApiCatalago\\ApiCatalago.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -241,9 +233,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "ErrorDetails.cs",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Models\\ErrorDetails.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Models\\ErrorDetails.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Models\\ErrorDetails.cs",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Models\\ErrorDetails.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Models\\ErrorDetails.cs",
               "RelativeToolTip": "ApiCatalago\\Models\\ErrorDetails.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -253,9 +245,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "Categoria.cs",
-              "DocumentMoniker": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Models\\Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Models\\Categoria.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Models\\Categoria.cs",
-              "ToolTip": "D:\\OneDrive - Processware\\\u00C1rea de Trabalho\\pessoal\\Nova pasta\\ApiCatalago\\ApiCatalago\\Models\\Categoria.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Models\\Categoria.cs",
               "RelativeToolTip": "ApiCatalago\\Models\\Categoria.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAABoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

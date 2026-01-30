@@ -32,7 +32,7 @@ namespace ApiCatalago.Logging
 
         private void WriteTextLog(string msg)
         {
-            string path = $@"{AppDomain.CurrentDomain.BaseDirectory} + \custom Log";
+            string path = $@"{AppDomain.CurrentDomain.BaseDirectory}\custom Log\LOG.txt";
             using (StreamWriter streamWriter = new StreamWriter(path, true))
             {
                 try
