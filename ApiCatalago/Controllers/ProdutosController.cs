@@ -20,72 +20,50 @@ namespace ApiCatalago.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Produto>> Get()
         {
-            try
-            {
+            
                 var produtos = _context.Produtos.AsNoTracking().ToList();
                 if (produtos is null)
                     return NotFound("Produtos não encontrados");
                 return produtos;
-            }
-            catch (Exception e)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
-            }
+           
         }
 
         [HttpGet("GetAllProductAsync")]
         public async Task<ActionResult<IEnumerable<Produto>>> GetAsync()
         {
-            try
-            {
+
                 var produtos = await _context.Produtos.AsNoTracking().ToListAsync();
                 if (produtos is null)
                     return NotFound("Produtos não encontrados");
                 return produtos;
-            }
-            catch (Exception e)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
-            }
+            
         }
 
         [HttpGet("{id:int}", Name = "GetProduto")]
         public ActionResult<Produto> Get(int id)
         {
-            try
-            {
+           
                 var produto = _context.Produtos.AsNoTracking().FirstOrDefault(p => p.Id == id);
                 if (produto is null)
                     return NotFound("Produto não existe");
                 return produto;
-            }
-            catch (Exception e)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
-            }
+            
         }
 
         [HttpGet("GetProdutoAsync/{id:int:min(1)}", Name = "GetProdutoAsync")]
         public async Task<ActionResult<Produto>> GetAsync(int id)
         {
-            try
-            {
                 var produto = await _context.Produtos.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
                 if (produto is null)
                     return NotFound("Produto não existe");
                 return produto;
-            }
-            catch (Exception e)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
-            }
+            
         }
 
         [HttpPost]
         public ActionResult Post(Produto produto)
         {
-            try
-            {
+           
                 if (produto is null)
                     return BadRequest();
 
@@ -93,36 +71,26 @@ namespace ApiCatalago.Controllers
                 _context.SaveChanges();
 
                 return new CreatedAtRouteResult("GetProduto", new { id = produto.Id }, produto);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
-            }
+            
         }
 
         [HttpPut("{id:int}")]
         public ActionResult Put(int id, Produto produto)
         {
-            try
-            {
+            
                 if (id != produto.Id)
                     return BadRequest();
 
                 _context.Entry(produto).State = EntityState.Modified;
                 _context.SaveChanges();
                 return Ok(produto);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
-            }
+            
         }
 
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
-            try
-            {
+           
                 var produto = _context.Produtos.FirstOrDefault(p => p.Id == id);
                 if (produto is null)
                     return NotFound("Id não encontrado");
@@ -131,11 +99,7 @@ namespace ApiCatalago.Controllers
                 _context.SaveChanges();
 
                 return Ok(produto);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro inesperado: " + e.Message);
-            }
+           
         }
 
     }

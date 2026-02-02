@@ -17,7 +17,12 @@ builder.Services.AddDbContext<ApiCatalagoContext>(
 // Add services to the container.
 
 builder.Services.AddScoped<APILoggingFilter>();
-builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+builder.Services
+    .AddControllers(
+    options => options.Filters.Add<ApiExceptionFilter>())
+    .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
 builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration { logLevel = LogLevel.Information}));
 
 builder.Services.AddOpenApi();
