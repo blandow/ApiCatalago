@@ -20,7 +20,7 @@ builder.Services.AddScoped<APILoggingFilter>();
 
 builder.Services
     .AddControllers(
-    options => options.Filters.Add<ApiExceptionFilter>())
+    options => options.Filters.Add<ApiExceptionFilter>()) 
     .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration { logLevel = LogLevel.Information}));
