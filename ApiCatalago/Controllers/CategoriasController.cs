@@ -1,6 +1,7 @@
 ﻿using ApiCatalago.Context;
 using ApiCatalago.Filters;
 using ApiCatalago.Models;
+using ApiCatalago.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
@@ -11,86 +12,94 @@ namespace ApiCatalago.Controllers
     [ApiController]
     public class CategoriasController : ControllerBase
     {
-        private readonly ApiCatalagoContext _context;
+        private readonly ICategoriaRepository _repository;
+        private readonly ILogger<CategoriasController> _logger;
 
-        public CategoriasController(ApiCatalagoContext context)
+        public CategoriasController(ICategoriaRepository repository, ILogger<CategoriasController> logger)
         {
-            _context = context;
+            _repository = repository;
+            _logger = logger;
         }
 
         [HttpGet]
         [ServiceFilter(typeof(APILoggingFilter))]
         public ActionResult<IEnumerable<Categoria>> Get()
         {
-            return _context.Categorias.AsNoTracking().ToList();
+            return Ok(_repository.GetCategorias());
 
         }
 
-        [HttpGet("GetAllAsync")]
-        public async Task<ActionResult<IEnumerable<Categoria>>> GetAsync()
-        {
+        //[HttpGet("GetAllAsync")]
+        //public async Task<ActionResult<IEnumerable<Categoria>>> GetAsync()
+        //{
 
-            if (_context.Categorias is null)
-                return NotFound("Categorias não encontradas");
+        //    if (_context.Categorias is null)
+        //        return NotFound("Categorias não encontradas");
 
-            return await _context.Categorias.AsNoTracking().ToListAsync();
+        //    return await _context.Categorias.AsNoTracking().ToListAsync();
 
-        }
+        //}
 
-        [HttpGet("CategoriasProdutos")]
-        public ActionResult<IEnumerable<Categoria>> GetCategoriaProdutos()
-        {
-            return _context.Categorias.Include(c => c.Produtos).Where(c => c.Id <= 10).ToList();
+        //[HttpGet("CategoriasProdutos")]
+        //public ActionResult<IEnumerable<Categoria>> GetCategoriaProdutos()
+        //{
 
-        }
+        //    return _context.Categorias.Include(c => c.Produtos).Where(c => c.Id <= 10).ToList();
 
-        [HttpGet("CategoriasProdutosAsync")]
-        public async Task<ActionResult<IEnumerable<Categoria>>> GetCategoriaProdutosAsync()
-        {
+        //}
 
-            if (_context.Categorias is null)
-                return NotFound("Categorias não encontradas");
+        //[HttpGet("CategoriasProdutosAsync")]
+        //public async Task<ActionResult<IEnumerable<Categoria>>> GetCategoriaProdutosAsync()
+        //{
 
-            return await _context.Categorias.Include(c => c.Produtos).Where(c => c.Id <= 10).ToListAsync();
+        //    if (_context.Categorias is null)
+        //        return NotFound("Categorias não encontradas");
 
+        //    return await _context.Categorias.Include(c => c.Produtos).Where(c => c.Id <= 10).ToListAsync();
 
-        }
+        //}
 
         [HttpGet("{id:int}", Name = "GetCategoriaId")]
         public ActionResult<Categoria> Get(int id)
         {
 
-            var categoria = _context.Categorias.AsNoTracking().FirstOrDefault(c => c.Id == id);
+            var categoria = _repository.GetCategoria(id);
             if (categoria is null)
-                return NotFound($"id: {id} inválido");
-            return categoria;
+            {
 
+                _logger.LogWarning("Categoria com Id inválido");
+                return NotFound($"id: {id} inválido");
+            }
+
+            return Ok(categoria);
 
         }
 
-        [HttpGet("GetCategoriaIdAsync/{id:int:min(0)}", Name = "GetCategoriaIdAsync")]
-        public async Task<ActionResult<Categoria>> GetAsync(int id)
-        {
+        //[HttpGet("GetCategoriaIdAsync/{id:int:min(0)}", Name = "GetCategoriaIdAsync")]
+        //public async Task<ActionResult<Categoria>> GetAsync(int id)
+        //{
 
-            var categoria = await _context.Categorias.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
+        //    var categoria = await _context.Categorias.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
 
-            if (categoria is null)
-                return NotFound($"id: {id} inválido");
-            return categoria;
+        //    if (categoria is null)
+        //        return NotFound($"id: {id} inválido");
+        //    return categoria;
 
-        }
+        //}
 
         [HttpPost]
         public ActionResult Post(Categoria cat)
         {
 
             if (cat is null)
+            {
+                _logger.LogWarning("Categoria inválida");
                 return BadRequest();
+            }
 
-            _context.Categorias.Add(cat);
-            _context.SaveChanges();
+            var createdCategory = _repository.Create(cat);
 
-            return new CreatedAtRouteResult("GetCategoriaId", new { id = cat.Id }, cat);
+            return new CreatedAtRouteResult("GetCategoriaId", new { id = createdCategory.Id }, createdCategory);
 
         }
 
@@ -99,12 +108,12 @@ namespace ApiCatalago.Controllers
         {
 
             if (id != cat.Id)
+            {
+                _logger.LogWarning("Id inválido");
                 return BadRequest();
+            }
 
-            _context.Entry(cat).State = EntityState.Modified;
-            _context.SaveChanges();
-
-            return Ok();
+            return Ok(_repository.Update(cat));
 
         }
 
@@ -112,15 +121,16 @@ namespace ApiCatalago.Controllers
         public ActionResult Delete(int id)
         {
 
-            var cat = _context.Categorias.FirstOrDefault(c => c.Id == id);
+            var cat = _repository.GetCategoria(id);
 
             if (cat is null)
+            {
+
+                _logger.LogWarning("Categoria não encontrada");
                 return NotFound();
+            }
 
-            _context.Remove(cat);
-            _context.SaveChanges();
-
-            return Ok(cat);
+            return Ok(_repository.Delete(id));
 
 
         }

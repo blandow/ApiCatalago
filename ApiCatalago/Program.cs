@@ -2,6 +2,7 @@ using ApiCatalago.Context;
 using ApiCatalago.Extensions;
 using ApiCatalago.Filters;
 using ApiCatalago.Logging;
+using ApiCatalago.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -17,13 +18,15 @@ builder.Services.AddDbContext<ApiCatalagoContext>(
 // Add services to the container.
 
 builder.Services.AddScoped<APILoggingFilter>();
+builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddScoped<IProdutoRepository, ProdutosRepository>();
 
 builder.Services
     .AddControllers(
-    options => options.Filters.Add<ApiExceptionFilter>()) 
+    options => options.Filters.Add<ApiExceptionFilter>())
     .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
-builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration { logLevel = LogLevel.Information}));
+builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration { logLevel = LogLevel.Information }));
 
 builder.Services.AddOpenApi();
 
@@ -33,7 +36,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    
+
     app.MapOpenApi();
     app.UseSwaggerUI(options => options.SwaggerEndpoint("/openapi/v1.json", "Weather API"));
     app.UseDeveloperExceptionPage();

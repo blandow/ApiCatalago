@@ -22,3 +22,77 @@ Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso
 Debug: SetUpResponseForBrowserRefresh - 1 ##### --> Response markup is scheduled to include browser refresh script injection.
 Debug: BrowserConfiguredForRefreshes - 2 ##### --> Response markup was updated to include browser refresh script injection.
 Debug:  - 0 ##### --> Script injected: /_framework/aspnetcore-browser-refresh.js
+Debug:  - 0 ##### --> Middleware loaded
+Debug:  - 0 ##### --> Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16507 B).
+Debug:  - 0 ##### --> Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+Debug:  - 0 ##### --> Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Debug:  - 0 ##### --> Script injected: /_framework/aspnetcore-browser-refresh.js
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 12/02/2026 00:16:10
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (90ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 12/02/2026 00:16:12
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Debug:  - 0 ##### --> Middleware loaded
+Debug:  - 0 ##### --> Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16507 B).
+Debug:  - 0 ##### --> Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+Debug:  - 0 ##### --> Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Debug: SetUpResponseForBrowserRefresh - 1 ##### --> Response markup is scheduled to include browser refresh script injection.
+Debug: BrowserConfiguredForRefreshes - 2 ##### --> Response markup was updated to include browser refresh script injection.
+Debug:  - 0 ##### --> Script injected: /_framework/aspnetcore-browser-refresh.js
+Debug:  - 0 ##### --> Middleware loaded
+Debug:  - 0 ##### --> Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16507 B).
+Debug:  - 0 ##### --> Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+Debug:  - 0 ##### --> Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Debug: SetUpResponseForBrowserRefresh - 1 ##### --> Response markup is scheduled to include browser refresh script injection.
+Debug: BrowserConfiguredForRefreshes - 2 ##### --> Response markup was updated to include browser refresh script injection.
+Debug:  - 0 ##### --> Script injected: /_framework/aspnetcore-browser-refresh.js
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 02/03/2026 23:23:36
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (119ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 02/03/2026 23:23:40
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (73ms) [Parameters=[@p0='?' (Size = 300), @p1='?' (Size = 80)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Categorias` (`ImagemUrl`, `Nome`)
+VALUES (@p0, @p1);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`CategoriaId`, `p`.`DataCadastro`, `p`.`Descricao`, `p`.`Estoque`, `p`.`ImagemUrl`, `p`.`Nome`, `p`.`Preco`
+FROM `Produtos` AS `p`
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`CategoriaId`, `p`.`DataCadastro`, `p`.`Descricao`, `p`.`Estoque`, `p`.`ImagemUrl`, `p`.`Nome`, `p`.`Preco`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
