@@ -14,18 +14,18 @@ namespace ApiCatalago.Controllers
     {
 
         private readonly ILogger<ProdutosController> _logger;
-        
-        private readonly IProdutoRepository _repositoryProduto;
-        public ProdutosController(ILogger<ProdutosController> logger, IProdutoRepository repositoryProduto)
+
+        private readonly IUnitOfWork _UoW;
+        public ProdutosController(ILogger<ProdutosController> logger,  IUnitOfWork uoW)
         {
 
             _logger = logger;
-            _repositoryProduto = repositoryProduto;
+            _UoW = uoW;
         }
         [HttpGet ("produtos/{id}")]
         public ActionResult<IEnumerable<Produto>> GetProdutosCategoria(int id)
         {
-            var produtos = _repositoryProduto.GetProdutosPorCategoria(id);
+            var produtos = _UoW.ProdutoRepository.GetProdutosPorCategoria(id);
             if(produtos is null)
             {
                 _logger.LogError("categoria de produtos não encontrados");
@@ -38,7 +38,7 @@ namespace ApiCatalago.Controllers
         public ActionResult<IEnumerable<Produto>> Get()
         {
 
-            return Ok(_repositoryProduto.GetAll());
+            return Ok(_UoW.ProdutoRepository.GetAll());
 
         }
 
@@ -57,7 +57,7 @@ namespace ApiCatalago.Controllers
         public ActionResult<Produto> Get(int id)
         {
 
-            return Ok(_repositoryProduto.Get(p => p.Id == id));
+            return Ok(_UoW.ProdutoRepository.Get(p => p.Id == id));
 
         }
 
@@ -82,7 +82,8 @@ namespace ApiCatalago.Controllers
                 return BadRequest();
             }
 
-            var prodNew = _repositoryProduto.Create(produto);
+            var prodNew = _UoW.ProdutoRepository.Create(produto);
+            _UoW.Commit();
 
             return new CreatedAtRouteResult("GetProduto", new { id = prodNew.Id }, prodNew);
 
@@ -97,8 +98,10 @@ namespace ApiCatalago.Controllers
                 _logger.LogError($"ID: {id} DIFERENTE DO PRODUTO");
                 return BadRequest();
             }
+            var prodUpdate = _UoW.ProdutoRepository.Update(produto);
+            _UoW.Commit();
 
-            return Ok(_repositoryProduto.Update(produto));
+            return Ok(prodUpdate);
 
         }
 
@@ -106,14 +109,16 @@ namespace ApiCatalago.Controllers
         public ActionResult Delete(int id)
         {
 
-            var produto = _repositoryProduto.Get(p => p.Id == id);
+            var produto = _UoW.ProdutoRepository.Get(p => p.Id == id);
             if ( produto is null)
             {
                 _logger.LogError("Produto não encontrado");
                 return NotFound("Id não encontrado");
             }
+            var deletedProd = _UoW.ProdutoRepository.Delete(produto);
+            _UoW.Commit(); 
 
-            return Ok(_repositoryProduto.Delete(produto));
+            return Ok(deletedProd);
 
         }
 

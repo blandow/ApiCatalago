@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiCatalago")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e484d63023c58baca32b63f98c489546ac35153")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35141ae598adf3ac250b01673992235c15d740c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiCatalago")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiCatalago")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

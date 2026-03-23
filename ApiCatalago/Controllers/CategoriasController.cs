@@ -12,20 +12,21 @@ namespace ApiCatalago.Controllers
     [ApiController]
     public class CategoriasController : ControllerBase
     {
-        private readonly IRepository<Categoria> _repository;
+        private readonly IUnitOfWork _UoW;
         private readonly ILogger<CategoriasController> _logger;
 
-        public CategoriasController(ICategoriaRepository repository, ILogger<CategoriasController> logger)
+        public CategoriasController(ILogger<CategoriasController> logger, IUnitOfWork UoW)
         {
-            _repository = repository;
+            
             _logger = logger;
+            _UoW = UoW;
         }
 
         [HttpGet]
         [ServiceFilter(typeof(APILoggingFilter))]
         public ActionResult<IEnumerable<Categoria>> Get()
         {
-            return Ok(_repository.GetAll());
+            return Ok(_UoW.CategoriaRepository.GetAll());
 
         }
 
@@ -63,7 +64,7 @@ namespace ApiCatalago.Controllers
         public ActionResult<Categoria> Get(int id)
         {
 
-            var categoria = _repository.Get(c => c.Id == id);
+            var categoria = _UoW.CategoriaRepository.Get(c => c.Id == id);
             if (categoria is null)
             {
 
@@ -97,7 +98,8 @@ namespace ApiCatalago.Controllers
                 return BadRequest();
             }
 
-            var createdCategory = _repository.Create(cat);
+            var createdCategory = _UoW.CategoriaRepository.Create(cat);
+            _UoW.Commit();
 
             return new CreatedAtRouteResult("GetCategoriaId", new { id = createdCategory.Id }, createdCategory);
 
@@ -112,8 +114,9 @@ namespace ApiCatalago.Controllers
                 _logger.LogWarning("Id inválido");
                 return BadRequest();
             }
-
-            return Ok(_repository.Update(cat));
+            var catUpdate = _UoW.CategoriaRepository.Update(cat);
+            _UoW.Commit();
+            return Ok(catUpdate);
 
         }
 
@@ -121,7 +124,7 @@ namespace ApiCatalago.Controllers
         public ActionResult Delete(int id)
         {
 
-            var cat = _repository.Get(c => c.Id == id);
+            var cat = _UoW.CategoriaRepository.Get(c => c.Id == id);
 
             if (cat is null)
             {
@@ -129,8 +132,9 @@ namespace ApiCatalago.Controllers
                 _logger.LogWarning("Categoria não encontrada");
                 return NotFound();
             }
-
-            return Ok(_repository.Delete(cat));
+            var categDel = _UoW.CategoriaRepository.Delete(cat);
+            _UoW.Commit();
+            return Ok(categDel);
 
 
         }
