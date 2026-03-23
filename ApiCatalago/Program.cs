@@ -20,6 +20,7 @@ builder.Services.AddDbContext<ApiCatalagoContext>(
 builder.Services.AddScoped<APILoggingFilter>();
 builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 builder.Services.AddScoped<IProdutoRepository, ProdutosRepository>();
+builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
 
 builder.Services
     .AddControllers(

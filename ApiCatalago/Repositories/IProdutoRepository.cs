@@ -2,12 +2,8 @@
 
 namespace ApiCatalago.Repositories
 {
-    public interface IProdutoRepository
+    public interface IProdutoRepository : IRepository<Produto>
     {
-        public IEnumerable<Produto> GetProdutos();
-        public Produto GetProduto(int id);
-        public Produto Create(Produto produto);
-        public Produto Update(Produto produto);
-        public Produto Delete(int id);
+        IEnumerable<Produto> GetProdutosPorCategoria(int id);
     }
 }

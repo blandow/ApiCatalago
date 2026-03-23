@@ -12,7 +12,7 @@ namespace ApiCatalago.Controllers
     [ApiController]
     public class CategoriasController : ControllerBase
     {
-        private readonly ICategoriaRepository _repository;
+        private readonly IRepository<Categoria> _repository;
         private readonly ILogger<CategoriasController> _logger;
 
         public CategoriasController(ICategoriaRepository repository, ILogger<CategoriasController> logger)
@@ -25,7 +25,7 @@ namespace ApiCatalago.Controllers
         [ServiceFilter(typeof(APILoggingFilter))]
         public ActionResult<IEnumerable<Categoria>> Get()
         {
-            return Ok(_repository.GetCategorias());
+            return Ok(_repository.GetAll());
 
         }
 
@@ -63,7 +63,7 @@ namespace ApiCatalago.Controllers
         public ActionResult<Categoria> Get(int id)
         {
 
-            var categoria = _repository.GetCategoria(id);
+            var categoria = _repository.Get(c => c.Id == id);
             if (categoria is null)
             {
 
@@ -121,7 +121,7 @@ namespace ApiCatalago.Controllers
         public ActionResult Delete(int id)
         {
 
-            var cat = _repository.GetCategoria(id);
+            var cat = _repository.Get(c => c.Id == id);
 
             if (cat is null)
             {
@@ -130,7 +130,7 @@ namespace ApiCatalago.Controllers
                 return NotFound();
             }
 
-            return Ok(_repository.Delete(id));
+            return Ok(_repository.Delete(cat));
 
 
         }
