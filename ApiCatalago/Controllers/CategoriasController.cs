@@ -1,4 +1,6 @@
 ﻿using ApiCatalago.Context;
+using ApiCatalago.DTO;
+using ApiCatalago.DTO.Mappings;
 using ApiCatalago.Filters;
 using ApiCatalago.Models;
 using ApiCatalago.Repositories;
@@ -24,9 +26,9 @@ namespace ApiCatalago.Controllers
 
         [HttpGet]
         [ServiceFilter(typeof(APILoggingFilter))]
-        public ActionResult<IEnumerable<Categoria>> Get()
+        public ActionResult<IEnumerable<CategoriaDTO>> Get()
         {
-            return Ok(_UoW.CategoriaRepository.GetAll());
+            return Ok(CategoriaDTOMappingExtentions.toListCategoriaDTOs(_UoW.CategoriaRepository.GetAll()));
 
         }
 
@@ -61,7 +63,7 @@ namespace ApiCatalago.Controllers
         //}
 
         [HttpGet("{id:int}", Name = "GetCategoriaId")]
-        public ActionResult<Categoria> Get(int id)
+        public ActionResult<CategoriaDTO> Get(int id)
         {
 
             var categoria = _UoW.CategoriaRepository.Get(c => c.Id == id);
@@ -71,8 +73,8 @@ namespace ApiCatalago.Controllers
                 _logger.LogWarning("Categoria com Id inválido");
                 return NotFound($"id: {id} inválido");
             }
-
-            return Ok(categoria);
+            
+            return Ok(CategoriaDTOMappingExtentions.toCategoriaDTO(categoria));
 
         }
 
@@ -89,39 +91,40 @@ namespace ApiCatalago.Controllers
         //}
 
         [HttpPost]
-        public ActionResult Post(Categoria cat)
+        public ActionResult<CategoriaDTO> Post(CategoriaDTO catDTO)
         {
 
-            if (cat is null)
+            if (catDTO is null)
             {
                 _logger.LogWarning("Categoria inválida");
                 return BadRequest();
             }
 
-            var createdCategory = _UoW.CategoriaRepository.Create(cat);
+            var createdCategory = _UoW.CategoriaRepository.Create(catDTO.toCategoria());
             _UoW.Commit();
 
-            return new CreatedAtRouteResult("GetCategoriaId", new { id = createdCategory.Id }, createdCategory);
+            return new CreatedAtRouteResult("GetCategoriaId", new { id = createdCategory.Id }, CategoriaDTOMappingExtentions.toCategoriaDTO(createdCategory));
 
         }
 
         [HttpPut("{id:int}")]
-        public ActionResult Put(int id, Categoria cat)
+        public ActionResult Put(int id, CategoriaDTO catDTO)
         {
 
-            if (id != cat.Id)
+            if (id != catDTO.Id)
             {
                 _logger.LogWarning("Id inválido");
                 return BadRequest();
             }
-            var catUpdate = _UoW.CategoriaRepository.Update(cat);
+            var catUpdate = _UoW.CategoriaRepository.Update(catDTO.toCategoria());
             _UoW.Commit();
-            return Ok(catUpdate);
+
+            return Ok(CategoriaDTOMappingExtentions.toCategoriaDTO(catUpdate));
 
         }
 
         [HttpDelete("{id:int}")]
-        public ActionResult Delete(int id)
+        public ActionResult<CategoriaDTO> Delete(int id)
         {
 
             var cat = _UoW.CategoriaRepository.Get(c => c.Id == id);
@@ -132,9 +135,10 @@ namespace ApiCatalago.Controllers
                 _logger.LogWarning("Categoria não encontrada");
                 return NotFound();
             }
+            
             var categDel = _UoW.CategoriaRepository.Delete(cat);
             _UoW.Commit();
-            return Ok(categDel);
+            return Ok(CategoriaDTOMappingExtentions.toCategoriaDTO(categDel));
 
 
         }
