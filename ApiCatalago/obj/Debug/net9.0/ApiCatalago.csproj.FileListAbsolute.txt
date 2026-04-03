@@ -284,3 +284,7 @@ C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\M
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll

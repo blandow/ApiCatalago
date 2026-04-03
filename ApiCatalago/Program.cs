@@ -29,7 +29,8 @@ builder.Services.AddAutoMapper(cfg => { },typeof(ProdutoDTOMappingProfile));
 builder.Services
     .AddControllers(
     options => options.Filters.Add<ApiExceptionFilter>())
-    .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+    .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles)
+    .AddNewtonsoftJson();
 
 builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration { logLevel = LogLevel.Information }));
 

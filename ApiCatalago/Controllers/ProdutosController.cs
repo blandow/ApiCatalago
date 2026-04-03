@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using ApiCatalago.Repositories;
 using AutoMapper;
 using ApiCatalago.DTO;
+using Microsoft.AspNetCore.JsonPatch;
 
 
 namespace ApiCatalago.Controllers
@@ -108,6 +109,39 @@ namespace ApiCatalago.Controllers
 
             return Ok(_mapper.Map<ProdutoDTO>(prodUpdate));
 
+        }
+
+        [HttpPatch("{id}/UpdatePartial")]
+        public ActionResult<ProdutoDTOUpdateResponse> Patch(int id, JsonPatchDocument<ProdutoDTOUpdateRequest> produtoDTO)
+        {
+            if(produtoDTO is null|| id <= 0)
+            {
+                _logger.LogError($"ID menor ou igual a zero ou produto vazio");
+                return BadRequest();
+            }
+
+            var produto = _UoW.ProdutoRepository.Get(p => p.Id == id);
+            if(produto is null)
+            {
+                _logger.LogError($"produto não encontrado");
+                return BadRequest();
+            }
+
+
+            var produtoReqDTO = _mapper.Map<ProdutoDTOUpdateRequest>(produto);
+            produtoDTO.ApplyTo(produtoReqDTO, ModelState);
+
+            if(!ModelState.IsValid || !TryValidateModel(produtoReqDTO))
+            {
+                _logger.LogError("Erro no modelo de estados");
+                return BadRequest(ModelState);
+            }
+            _mapper.Map(produtoReqDTO, produto);
+            _UoW.ProdutoRepository.Update(produto);
+            _UoW.Commit();
+            
+
+            return Ok(_mapper.Map<ProdutoDTOUpdateResponse>(produto));
         }
 
         [HttpDelete("{id:int}")]
