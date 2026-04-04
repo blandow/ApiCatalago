@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ApiCatalago.Context;
 using ApiCatalago.Models;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http.HttpResults;
 using ApiCatalago.Repositories;
 using AutoMapper;
 using ApiCatalago.DTO;
 using Microsoft.AspNetCore.JsonPatch;
+using ApiCatalago.Pagination;
+using Newtonsoft.Json;
 
 
 namespace ApiCatalago.Controllers
@@ -75,6 +74,25 @@ namespace ApiCatalago.Controllers
         //        return produto;
 
         //}
+
+        [HttpGet("Pagination")]
+        public ActionResult<IEnumerable<ProdutoDTO>> Get([FromQuery] ProdutosParamiters produtosParamiters) 
+        {
+            var produtos = _UoW.ProdutoRepository.GetProdutosFromParam(produtosParamiters);
+
+            var metadata = new 
+            {
+                produtos.TotalCount,
+                produtos.PageSize,
+                produtos.CurrentPage,
+                produtos.TotalPages,
+                produtos.HasNext,
+                produtos.HasPrevious
+            };
+            Response.Headers.Append("F-PaginationProduct", JsonConvert.SerializeObject(metadata));
+
+            return Ok(_mapper.Map<IEnumerable<ProdutoDTO>>(produtos));
+        }
 
         [HttpPost]
         public ActionResult<ProdutoDTO> Post(ProdutoDTO produtoDTO)

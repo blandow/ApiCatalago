@@ -14,7 +14,7 @@ namespace ApiCatalago.DTO.Mappings
             {
                 Id = categoria.Id,
                 Nome = categoria.Nome,
-                ImagemUrl = categoria.ImagemUrl,
+                ImagemUrl = categoria.ImagemUrl
             };
         }
 
@@ -28,7 +28,7 @@ namespace ApiCatalago.DTO.Mappings
             {
                 Id = categoriaDTO.Id,
                 Nome = categoriaDTO.Nome,
-                ImagemUrl = categoriaDTO.ImagemUrl,
+                ImagemUrl = categoriaDTO.ImagemUrl
             };
         }
 
@@ -43,8 +43,8 @@ namespace ApiCatalago.DTO.Mappings
             {
                 Id = cat.Id,
                 Nome = cat.Nome,
-                ImagemUrl = cat.ImagemUrl,
-            }).ToList();
+                ImagemUrl = cat.ImagemUrl
+            }).ToList(); 
         }
     }
 }

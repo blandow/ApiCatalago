@@ -3,9 +3,11 @@ using ApiCatalago.DTO;
 using ApiCatalago.DTO.Mappings;
 using ApiCatalago.Filters;
 using ApiCatalago.Models;
+using ApiCatalago.Pagination;
 using ApiCatalago.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System.Data;
 
 namespace ApiCatalago.Controllers
@@ -89,6 +91,23 @@ namespace ApiCatalago.Controllers
         //    return categoria;
 
         //}
+        [HttpGet("PaginationCategoria")]
+        public ActionResult<IEnumerable<CategoriaDTO>> Get([FromQuery] CategoriaParameters categoriaParameters)
+        {
+            var categorias = _UoW.CategoriaRepository.GetPagedCategorias(categoriaParameters);
+            var meta = new
+            {
+                categorias.TotalCount,
+                categorias.PageSize,
+                categorias.CurrentPage,
+                categorias.TotalPages,
+                categorias.HasNext,
+                categorias.HasPrevious
+            };
+            Response.Headers.Append("F-PaginationCategorias", JsonConvert.SerializeObject(meta));
+            return Ok(categorias.toListCategoriaDTOs());
+        }
+
 
         [HttpPost]
         public ActionResult<CategoriaDTO> Post(CategoriaDTO catDTO)
