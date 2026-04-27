@@ -8,5 +8,6 @@ namespace ApiCatalago.Repositories
         IEnumerable<Produto> GetProdutosPorCategoria(int id);
         //IEnumerable<Produto> GetProdutosFromParam(ProdutosParamiters produtosParamiters);
         PagedList<Produto> GetProdutosFromParam(ProdutosParamiters produtosParamiters);
+        PagedList<Produto> GetProdutosFiltroPreco(ProdutoFiltroPreco produtosParamiters);
     }
 }

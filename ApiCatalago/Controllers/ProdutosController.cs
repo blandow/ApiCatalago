@@ -6,6 +6,7 @@ using ApiCatalago.DTO;
 using Microsoft.AspNetCore.JsonPatch;
 using ApiCatalago.Pagination;
 using Newtonsoft.Json;
+using MathNet.Numerics;
 
 
 namespace ApiCatalago.Controllers
@@ -25,6 +26,23 @@ namespace ApiCatalago.Controllers
             _UoW = uoW;
             _mapper = mapper;
         }
+
+        private ActionResult<IEnumerable<ProdutoDTO>> getProdutoMeta(PagedList<Produto> produtos)
+        {
+            var metadata = new
+            {
+                produtos.TotalCount,
+                produtos.PageSize,
+                produtos.CurrentPage,
+                produtos.TotalPages,
+                produtos.HasNext,
+                produtos.HasPrevious
+            };
+            Response.Headers.Append("F-PaginationProduct", JsonConvert.SerializeObject(metadata));
+
+            return Ok(_mapper.Map<IEnumerable<ProdutoDTO>>(produtos));
+        }
+
         [HttpGet ("produtos/{id}")]
         public ActionResult<IEnumerable<ProdutoDTO>> GetProdutosCategoria(int id)
         {
@@ -79,20 +97,21 @@ namespace ApiCatalago.Controllers
         public ActionResult<IEnumerable<ProdutoDTO>> Get([FromQuery] ProdutosParamiters produtosParamiters) 
         {
             var produtos = _UoW.ProdutoRepository.GetProdutosFromParam(produtosParamiters);
-
-            var metadata = new 
-            {
-                produtos.TotalCount,
-                produtos.PageSize,
-                produtos.CurrentPage,
-                produtos.TotalPages,
-                produtos.HasNext,
-                produtos.HasPrevious
-            };
-            Response.Headers.Append("F-PaginationProduct", JsonConvert.SerializeObject(metadata));
-
-            return Ok(_mapper.Map<IEnumerable<ProdutoDTO>>(produtos));
+            return getProdutoMeta(produtos);
         }
+        [HttpGet("Pagination/Produtos/Preco")]
+        public ActionResult<IEnumerable<ProdutoDTO>> GetProdutosPreco([FromQuery] ProdutoFiltroPreco produtosParamiters)
+        {
+            if(produtosParamiters.PrecoCriterio.Trim().ToLower() != "maior" && produtosParamiters.PrecoCriterio.Trim().ToLower() != "menor" && produtosParamiters.PrecoCriterio.Trim().ToLower() != "igual")
+            {
+                _logger.LogError("Criterio de preço inválido");
+                return BadRequest("Criterio de preço inválido");
+            }
+
+            var produtos = _UoW.ProdutoRepository.GetProdutosFiltroPreco(produtosParamiters);
+            return getProdutoMeta(produtos);
+        }
+
 
         [HttpPost]
         public ActionResult<ProdutoDTO> Post(ProdutoDTO produtoDTO)
