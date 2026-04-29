@@ -11,6 +11,18 @@ namespace ApiCatalago.Repositories
         {
         }
 
+        public PagedList<Categoria> GetCatFiltroNome(CategoriaFiltroNome categoriaParametros)
+        {
+            var categorias = GetAll().AsQueryable();
+
+            if(!string.IsNullOrEmpty(categoriaParametros.Nome))
+            {
+                categorias = categorias.Where(c => c.Nome.Contains(categoriaParametros.Nome)).OrderBy(c => c.Id);
+            }
+
+            return PagedList<Categoria>.ToPagedList(categorias, categoriaParametros.PageNumber, categoriaParametros.PageSize);
+        }
+
         public PagedList<Categoria> GetPagedCategorias(CategoriaParameters categoriaParameters)
         {
             return PagedList<Categoria>.ToPagedList 

@@ -5,6 +5,7 @@ using ApiCatalago.Filters;
 using ApiCatalago.Models;
 using ApiCatalago.Pagination;
 using ApiCatalago.Repositories;
+using MathNet.Numerics.Distributions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -24,6 +25,21 @@ namespace ApiCatalago.Controllers
             
             _logger = logger;
             _UoW = UoW;
+        }
+
+        private ActionResult<IEnumerable<CategoriaDTO>> getMetaCategOK(PagedList<Categoria> categorias)
+        {
+            var meta = new
+            {
+                categorias.TotalCount,
+                categorias.PageSize,
+                categorias.CurrentPage,
+                categorias.TotalPages,
+                categorias.HasNext,
+                categorias.HasPrevious
+            };
+            Response.Headers.Append("F-PaginationCategorias", JsonConvert.SerializeObject(meta));
+            return Ok(categorias.toListCategoriaDTOs());
         }
 
         [HttpGet]
@@ -95,19 +111,17 @@ namespace ApiCatalago.Controllers
         public ActionResult<IEnumerable<CategoriaDTO>> Get([FromQuery] CategoriaParameters categoriaParameters)
         {
             var categorias = _UoW.CategoriaRepository.GetPagedCategorias(categoriaParameters);
-            var meta = new
-            {
-                categorias.TotalCount,
-                categorias.PageSize,
-                categorias.CurrentPage,
-                categorias.TotalPages,
-                categorias.HasNext,
-                categorias.HasPrevious
-            };
-            Response.Headers.Append("F-PaginationCategorias", JsonConvert.SerializeObject(meta));
-            return Ok(categorias.toListCategoriaDTOs());
+            return getMetaCategOK(categorias);
         }
 
+        
+
+        [HttpGet("Pagetion/Categoria/filter/Nome")]
+        public ActionResult<IEnumerable<CategoriaDTO>> Get([FromQuery] CategoriaFiltroNome categoriaParameters)
+        {
+            var categorias = _UoW.CategoriaRepository.GetCatFiltroNome(categoriaParameters);
+            return getMetaCategOK(categorias);
+        }
 
         [HttpPost]
         public ActionResult<CategoriaDTO> Post(CategoriaDTO catDTO)
