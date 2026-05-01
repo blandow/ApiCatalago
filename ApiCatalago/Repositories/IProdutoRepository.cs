@@ -1,13 +1,13 @@
 ﻿using ApiCatalago.Models;
 using ApiCatalago.Pagination;
+using X.PagedList;
 
 namespace ApiCatalago.Repositories
 {
     public interface IProdutoRepository : IRepository<Produto>
     {
-        IEnumerable<Produto> GetProdutosPorCategoria(int id);
-        //IEnumerable<Produto> GetProdutosFromParam(ProdutosParamiters produtosParamiters);
-        PagedList<Produto> GetProdutosFromParam(ProdutosParamiters produtosParamiters);
-        PagedList<Produto> GetProdutosFiltroPreco(ProdutoFiltroPreco produtosParamiters);
+        Task<IEnumerable<Produto>> GetProdutosPorCategoriaAsync(int id);
+        Task<IPagedList<Produto>> GetProdutosFromParamAsync(ProdutosParamiters produtosParamiters);
+        Task<IPagedList<Produto>> GetProdutosFiltroPrecoAsync(ProdutoFiltroPreco produtosParamiters);
     }
 }

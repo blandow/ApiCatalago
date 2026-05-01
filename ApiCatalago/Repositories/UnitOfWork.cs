@@ -27,9 +27,9 @@ namespace ApiCatalago.Repositories
                 return _categoriaRep = _categoriaRep ?? new CategoriaRepository(_context);
             }
         }
-        public void Commit()
+        public async Task CommitAsync()
         {
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
         public void Dispose() 
         {

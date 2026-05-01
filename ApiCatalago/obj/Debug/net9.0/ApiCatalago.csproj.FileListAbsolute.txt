@@ -288,3 +288,6 @@ C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\M
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\JetBrains.Annotations.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\X.PagedList.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\X.PagedList.Mvc.Core.dll

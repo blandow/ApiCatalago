@@ -478,3 +478,26 @@ FROM `Categorias` AS `c`
 Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
 FROM `Categorias` AS `c`
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 01/05/2026 14:28:43
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (50ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 01/05/2026 14:28:46
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago

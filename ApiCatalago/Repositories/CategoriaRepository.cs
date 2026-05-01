@@ -1,7 +1,7 @@
 ﻿using ApiCatalago.Context;
 using ApiCatalago.Models;
 using ApiCatalago.Pagination;
-using Microsoft.EntityFrameworkCore;
+using X.PagedList;
 
 namespace ApiCatalago.Repositories
 {
@@ -11,26 +11,29 @@ namespace ApiCatalago.Repositories
         {
         }
 
-        public PagedList<Categoria> GetCatFiltroNome(CategoriaFiltroNome categoriaParametros)
+        public async Task<IPagedList<Categoria>> GetCatFiltroNomeAsync(CategoriaFiltroNome categoriaParametros)
         {
-            var categorias = GetAll().AsQueryable();
+            var categorias = await GetAllAsync();
+
 
             if(!string.IsNullOrEmpty(categoriaParametros.Nome))
             {
                 categorias = categorias.Where(c => c.Nome.Contains(categoriaParametros.Nome)).OrderBy(c => c.Id);
             }
 
-            return PagedList<Categoria>.ToPagedList(categorias, categoriaParametros.PageNumber, categoriaParametros.PageSize);
+            var categFiltradas = await categorias.ToPagedListAsync(categoriaParametros.PageNumber, categoriaParametros.PageSize);
+
+            
+
+            return categFiltradas;
         }
 
-        public PagedList<Categoria> GetPagedCategorias(CategoriaParameters categoriaParameters)
+        public async Task<IPagedList<Categoria>> GetPagedCategoriasAsync(CategoriaParameters categoriaParameters)
         {
-            return PagedList<Categoria>.ToPagedList 
-            (
-               GetAll().OrderBy(c => c.Id).AsQueryable(),
-               categoriaParameters.PageNumber,
-               categoriaParameters.PageSize
-            );
+            var categorias = await GetAllAsync();
+            var categoriasOrdenada = categorias.OrderBy(c => c.Id);
+
+            return await categoriasOrdenada.ToPagedListAsync(categoriaParameters.PageNumber, categoriaParameters.PageSize);
 
         }
     }
