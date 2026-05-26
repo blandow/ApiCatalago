@@ -501,3 +501,196 @@ Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhos
 Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
 Information:  - 0 ##### --> Hosting environment: Development
 Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 25/05/2026 14:19:30
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (73ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 25/05/2026 14:19:32
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 25/05/2026 20:35:18
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (116ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 25/05/2026 20:35:22
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (117ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 300), @p2='?' (Size = 80)], CommandType='Text', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `Categorias` (`Id`, `ImagemUrl`, `Nome`)
+VALUES (@p0, @p1, @p2);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (19ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 300), @p1='?' (Size = 80)], CommandType='Text', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+UPDATE `Categorias` SET `ImagemUrl` = @p0, `Nome` = @p1
+WHERE `Id` = @p2;
+SELECT ROW_COUNT();
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (62ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+DELETE FROM `Categorias`
+WHERE `Id` = @p0;
+SELECT ROW_COUNT();
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (82ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (59ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (71ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Categorias` AS `c`
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (58ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+ORDER BY `c`.`Id`
+LIMIT @__p_1 OFFSET @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Categorias` AS `c`
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+ORDER BY `c`.`Id`
+LIMIT @__p_1 OFFSET @__p_0
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (100ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (9ms) [Parameters=[@__categoriaParametros_Nome_0_contains='?' (Size = 80)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Categorias` AS `c`
+WHERE `c`.`Nome` LIKE @__categoriaParametros_Nome_0_contains
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (2ms) [Parameters=[@__categoriaParametros_Nome_0_contains='?' (Size = 80), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+WHERE `c`.`Nome` LIKE @__categoriaParametros_Nome_0_contains
+ORDER BY `c`.`Id`
+LIMIT @__p_2 OFFSET @__p_1
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Warning:  - 0 ##### --> You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (118ms) [Parameters=[@__produtosParamiters_Preco_Value_0='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Produtos` AS `p`
+WHERE `p`.`Preco` > @__produtosParamiters_Preco_Value_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (7ms) [Parameters=[@__produtosParamiters_Preco_Value_0='?' (DbType = Decimal), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`CategoriaId`, `p`.`DataCadastro`, `p`.`Descricao`, `p`.`Estoque`, `p`.`ImagemUrl`, `p`.`Nome`, `p`.`Preco`
+FROM `Produtos` AS `p`
+WHERE `p`.`Preco` > @__produtosParamiters_Preco_Value_0
+ORDER BY `p`.`Preco`
+LIMIT @__p_1 OFFSET @__p_1
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Produtos` AS `p`
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`CategoriaId`, `p`.`DataCadastro`, `p`.`Descricao`, `p`.`Estoque`, `p`.`ImagemUrl`, `p`.`Nome`, `p`.`Preco`
+FROM `Produtos` AS `p`
+ORDER BY `p`.`Id`
+LIMIT @__p_1 OFFSET @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Produtos` AS `p`
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`CategoriaId`, `p`.`DataCadastro`, `p`.`Descricao`, `p`.`Estoque`, `p`.`ImagemUrl`, `p`.`Nome`, `p`.`Preco`
+FROM `Produtos` AS `p`
+ORDER BY `p`.`Id`
+LIMIT @__p_1 OFFSET @__p_0

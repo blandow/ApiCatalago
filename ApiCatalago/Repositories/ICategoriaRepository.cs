@@ -2,6 +2,8 @@
 using ApiCatalago.Pagination;
 using X.PagedList;
 
+
+
 namespace ApiCatalago.Repositories
 {
     public interface ICategoriaRepository : IRepository<Categoria>

@@ -7,7 +7,9 @@ using Microsoft.AspNetCore.JsonPatch;
 using ApiCatalago.Pagination;
 using Newtonsoft.Json;
 using MathNet.Numerics;
+using X.PagedList.EF;
 using X.PagedList;
+
 
 
 namespace ApiCatalago.Controllers
@@ -38,6 +40,8 @@ namespace ApiCatalago.Controllers
                 produtos.TotalItemCount,
                 produtos.HasNextPage,
                 produtos.HasPreviousPage
+
+
             };
             Response.Headers.Append("F-PaginationProduct", JsonConvert.SerializeObject(metadata));
 

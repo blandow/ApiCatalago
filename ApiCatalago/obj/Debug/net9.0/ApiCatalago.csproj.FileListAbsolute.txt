@@ -129,7 +129,6 @@ C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\t
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
-C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\obj\Debug\net9.0\ApiCatalago.sourcelink.json
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\obj\Debug\net9.0\swae.build.ex.cache
 D:\OneDrive - Processware\Área de Trabalho\pessoal\Nova pasta\ApiCatalago\ApiCatalago\obj\Debug\net9.0\ApiCatalago.csproj.AssemblyReference.cache
 D:\OneDrive - Processware\Área de Trabalho\pessoal\Nova pasta\ApiCatalago\ApiCatalago\obj\Debug\net9.0\rpswa.dswa.cache.json
@@ -273,10 +272,7 @@ C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\N
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\NPOI.OOXML.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\NPOI.OpenXml4Net.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\NPOI.OpenXmlFormats.dll
-C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\NSax.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\ICSharpCode.SharpZipLib.dll
-C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\SixLabors.Fonts.dll
-C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\SixLabors.ImageSharp.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\ZString.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\AutoMapper.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
@@ -288,6 +284,28 @@ C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\M
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
-C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\JetBrains.Annotations.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\X.PagedList.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\X.PagedList.Mvc.Core.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\linux-arm\native\libSkiaSharp.so
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\linux-arm64\native\libSkiaSharp.so
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\linux-loongarch64\native\libSkiaSharp.so
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\linux-musl-arm\native\libSkiaSharp.so
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\linux-musl-arm64\native\libSkiaSharp.so
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\linux-musl-loongarch64\native\libSkiaSharp.so
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\linux-musl-riscv64\native\libSkiaSharp.so
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\linux-riscv64\native\libSkiaSharp.so
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\linux-x64\native\libSkiaSharp.so
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\linux-x86\native\libSkiaSharp.so
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\win-arm64\native\libSkiaSharp.pdb
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\win-x64\native\libSkiaSharp.pdb
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\runtimes\win-x86\native\libSkiaSharp.pdb
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\X.PagedList.EF.dll

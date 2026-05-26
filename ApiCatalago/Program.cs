@@ -24,6 +24,9 @@ builder.Services.AddScoped<IProdutoRepository, ProdutosRepository>();
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+builder.Services.AddAuthorization();
+builder.Services.AddAuthentication("Bearer").AddJwtBearer();
+
 builder.Services.AddAutoMapper(cfg => { },typeof(ProdutoDTOMappingProfile));
 
 builder.Services
@@ -49,10 +52,8 @@ if (app.Environment.IsDevelopment())
     app.ConfigureExceptionHandler();
 }
 
+
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

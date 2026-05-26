@@ -6,11 +6,14 @@ using ApiCatalago.Models;
 using ApiCatalago.Pagination;
 using ApiCatalago.Repositories;
 using MathNet.Numerics.Distributions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Data;
 using X.PagedList;
+using X.PagedList.EF;
+
 
 namespace ApiCatalago.Controllers
 {
@@ -34,7 +37,7 @@ namespace ApiCatalago.Controllers
             {
                 categorias.Count,
                 categorias.PageSize,
-                categorias.PageCount,
+                categorias.PageNumber,
                 categorias.TotalItemCount,
                 categorias.HasNextPage,
                 categorias.HasPreviousPage
@@ -45,6 +48,7 @@ namespace ApiCatalago.Controllers
 
         [HttpGet]
         [ServiceFilter(typeof(APILoggingFilter))]
+       
         public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
         {
             var categorias = await _UoW.CategoriaRepository.GetAllAsync();

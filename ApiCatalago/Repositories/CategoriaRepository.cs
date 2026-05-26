@@ -2,6 +2,7 @@
 using ApiCatalago.Models;
 using ApiCatalago.Pagination;
 using X.PagedList;
+using X.PagedList.EF;
 
 namespace ApiCatalago.Repositories
 {
@@ -13,8 +14,8 @@ namespace ApiCatalago.Repositories
 
         public async Task<IPagedList<Categoria>> GetCatFiltroNomeAsync(CategoriaFiltroNome categoriaParametros)
         {
-            var categorias = await GetAllAsync();
-
+            var categorias = GetAllQueryable();
+           
 
             if(!string.IsNullOrEmpty(categoriaParametros.Nome))
             {
@@ -30,11 +31,10 @@ namespace ApiCatalago.Repositories
 
         public async Task<IPagedList<Categoria>> GetPagedCategoriasAsync(CategoriaParameters categoriaParameters)
         {
-            var categorias = await GetAllAsync();
-            var categoriasOrdenada = categorias.OrderBy(c => c.Id);
+            var categorias = GetAllQueryable().OrderBy(c => c.Id);
+            
 
-            return await categoriasOrdenada.ToPagedListAsync(categoriaParameters.PageNumber, categoriaParameters.PageSize);
-
+            return await categorias.ToPagedListAsync(categoriaParameters.PageNumber, categoriaParameters.PageSize);
         }
     }
 }

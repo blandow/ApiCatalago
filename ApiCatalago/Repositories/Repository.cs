@@ -34,6 +34,10 @@ namespace ApiCatalago.Repositories
         {
             return await _context.Set<T>().AsNoTracking().ToListAsync();
         }
+        public IQueryable<T> GetAllQueryable()
+        {
+            return _context.Set<T>().AsNoTracking();
+        }
 
         public T Update(T entity)
         {

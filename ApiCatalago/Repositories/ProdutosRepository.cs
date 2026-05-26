@@ -1,8 +1,8 @@
 ﻿using ApiCatalago.Context;
 using ApiCatalago.Models;
 using ApiCatalago.Pagination;
+using X.PagedList.EF;
 using X.PagedList;
-
 namespace ApiCatalago.Repositories
 {
     public class ProdutosRepository : Repository<Produto>, IProdutoRepository
@@ -13,7 +13,7 @@ namespace ApiCatalago.Repositories
 
         public async Task<IPagedList<Produto>> GetProdutosFiltroPrecoAsync(ProdutoFiltroPreco produtosParamiters)
         {
-            var produtos = await GetAllAsync();
+            var produtos = GetAllQueryable();
             var produtosAsQueryable = produtos.AsQueryable();
 
             if (produtosParamiters.Preco.HasValue && !string.IsNullOrEmpty(produtosParamiters.PrecoCriterio))
@@ -37,8 +37,8 @@ namespace ApiCatalago.Repositories
 
         public async Task<IPagedList<Produto>> GetProdutosFromParamAsync(ProdutosParamiters produtosParamiters)
         {
-            var produtos = await GetAllAsync();
-            var produtosAsQueryable = produtos.OrderBy(p => p.Id).AsQueryable();
+            var produtos = GetAllQueryable();
+            var produtosAsQueryable = produtos.OrderBy(p => p.Id);
 
             return await produtosAsQueryable.ToPagedListAsync(produtosParamiters.PageNumber, produtosParamiters.PageSize);
         }
