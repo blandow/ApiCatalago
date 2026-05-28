@@ -3,11 +3,18 @@ using ApiCatalago.DTO.Mappings;
 using ApiCatalago.Extensions;
 using ApiCatalago.Filters;
 using ApiCatalago.Logging;
+using ApiCatalago.Models;
 using ApiCatalago.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using System.Text.Json.Serialization;
+using System.Text.Unicode;
 
 var builder = WebApplication.CreateBuilder(args);
+var secretKey = builder.Configuration["Jwt:SecretKey"] ?? throw new ArgumentException("Secret key is Invalid");
 
 //Add Connections string and configure DbContext here
 builder.Services.AddDbContext<ApiCatalagoContext>(
@@ -26,6 +33,30 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication("Bearer").AddJwtBearer();
+
+builder.Services.AddIdentity<ApplicationUser,IdentityRole>().AddEntityFrameworkStores<ApiCatalagoContext>().AddDefaultTokenProviders();
+
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.SaveToken = true;
+    options.RequireHttpsMetadata = false;
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ClockSkew = TimeSpan.Zero,
+        ValidAudience = builder.Configuration["Jwt:ValidAudience"],
+        ValidIssuer = builder.Configuration["Jwt:ValidIssuer"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
+    };
+});
 
 builder.Services.AddAutoMapper(cfg => { },typeof(ProdutoDTOMappingProfile));
 
