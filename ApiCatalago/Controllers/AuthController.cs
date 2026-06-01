@@ -34,7 +34,7 @@ namespace ApiCatalago.Controllers
         {
             var user = await _userManeger.FindByNameAsync(model.UserName!);
 
-            if(user is not null && await _userManeger.CheckPasswordAsync(user, model.Password!))
+            if(user != null && await _userManeger.CheckPasswordAsync(user, model.Password!))
             {
                 var userRoles = await _userManeger.GetRolesAsync(user);
                 var authClaims = new List<Claim> 
@@ -68,6 +68,47 @@ namespace ApiCatalago.Controllers
             }
 
             return Unauthorized();
+        }
+        
+        [HttpPost]
+        [Route("register")]
+        public async Task<IActionResult> Register([FromBody] RegisterModelDTO model)
+        {
+            var validUser = await _userManeger.FindByNameAsync(model.UserName!);
+
+            if(validUser != null)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, 
+                    new ResponseDTO { 
+                        Status = "Error",
+                        Message = "User already exists!"
+                });
+            }
+
+            ApplicationUser user = new()
+            {
+                Email = model.Email,
+                SecurityStamp = Guid.NewGuid().ToString(),
+                UserName = model.UserName
+            };
+            
+            var result = await _userManeger.CreateAsync(user, model.Password!);
+
+            if (!result.Succeeded)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    new ResponseDTO
+                    {
+                        Status = "Error",
+                        Message = "User creation failed!"
+                    });
+            }
+
+            return Ok(new ResponseDTO
+            {
+                Status = "Success",
+                Message = "User created successfully!"
+            });
         }
     }
 }
