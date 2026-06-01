@@ -110,5 +110,48 @@ namespace ApiCatalago.Controllers
                 Message = "User created successfully!"
             });
         }
+
+        [HttpPost]
+        [Route("refreshToken")]
+        public async Task<IActionResult> RefreshToken(TokenModelDTO tokenModel)
+        {
+            if(tokenModel is null)
+            {
+                return BadRequest("Invalid client request");
+            }
+            
+            string? accessToken = tokenModel.AccesToken ?? throw new ArgumentNullException(nameof(tokenModel));
+
+            string? refreshToken = tokenModel.RefreshToken ?? throw new ArgumentNullException(nameof(tokenModel));
+
+            var principal = _tokenService.GetPrincipalFromExpiredToken(accessToken!, _configuration);
+
+            if(principal == null)
+            {
+                return BadRequest("Invalid access token or refresh token");
+            }
+
+            string userName = principal.Identity.Name;
+
+            var user = await _userManeger.FindByNameAsync(userName!);
+
+            if(user == null || user.RefreshToken != refreshToken || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
+            {
+                return BadRequest("Invalid access token, refresh token or the refresh token has expired");
+            }
+
+            var newAccessToken = _tokenService.GenerateAccessToken(principal.Claims.ToList(), _configuration);
+            var newRefreshToken = _tokenService.GenerateRefreshToken();
+
+            user.RefreshToken = newRefreshToken;
+            await _userManeger.UpdateAsync(user);
+
+
+            return new ObjectResult(new
+            {
+                accessToken = new JwtSecurityTokenHandler().WriteToken(newAccessToken),
+                refreshToken = newRefreshToken,
+            });
+        }
     }
 }
