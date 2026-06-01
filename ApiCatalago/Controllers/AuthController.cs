@@ -153,5 +153,23 @@ namespace ApiCatalago.Controllers
                 refreshToken = newRefreshToken,
             });
         }
+
+        [Authorize]
+        [HttpPost]
+        [Route("revoke/{username}")]
+        public async Task<IActionResult> Revoke(string username)
+        {
+            var user = await _userManeger.FindByNameAsync(username);
+
+            if(user == null)
+            {
+                return BadRequest("Invalid User");
+            }
+
+            user.RefreshToken = null;
+            await _userManeger.UpdateAsync(user);
+
+            return NoContent();
+        }
     }
 }
