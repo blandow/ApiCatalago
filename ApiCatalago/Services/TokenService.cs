@@ -21,7 +21,7 @@ namespace ApiCatalago.Services
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.UtcNow.AddMinutes(_config.GetSection("JWT").GetValue<double>("TokenValidityInMinutes")),
                 Audience = _config.GetSection("JWT").GetValue<string>("ValidAudience"),
-                Issuer = _config.GetSection("JWT").GetValue<string>("ValidIssuser"),
+                Issuer = _config.GetSection("JWT").GetValue<string>("ValidIssuer"),
                 SigningCredentials = signatureCredentials
             };
 
@@ -33,10 +33,8 @@ namespace ApiCatalago.Services
 
         public string GenerateRefreshToken()
         {
-            var randonBytes = new byte[128];
-            using var randomGenerator = RandomNumberGenerator.Create();
             
-            return Convert.ToBase64String(randonBytes);
+            return Convert.ToBase64String(RandomNumberGenerator.GetBytes(128));
         }
 
         public ClaimsPrincipal GetPrincipalFromExpiredToken(string token, IConfiguration _config)

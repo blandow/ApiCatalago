@@ -10,9 +10,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Text;
 using System.Text.Json.Serialization;
-using System.Text.Unicode;
 
 var builder = WebApplication.CreateBuilder(args);
 var secretKey = builder.Configuration["Jwt:SecretKey"] ?? throw new ArgumentException("Secret key is Invalid");
@@ -29,15 +29,11 @@ builder.Services.AddDbContext<ApiCatalagoContext>(
 builder.Services.AddScoped<APILoggingFilter>();
 builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 builder.Services.AddScoped<IProdutoRepository, ProdutosRepository>();
-builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 
 builder.Services.AddAuthorization();
-builder.Services.AddAuthentication("Bearer").AddJwtBearer();
-
-builder.Services.AddIdentity<ApplicationUser,IdentityRole>().AddEntityFrameworkStores<ApiCatalagoContext>().AddDefaultTokenProviders();
-
 
 builder.Services.AddAuthentication(options =>
 {
@@ -60,7 +56,13 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-builder.Services.AddAutoMapper(cfg => { },typeof(ProdutoDTOMappingProfile));
+//builder.Services.AddAuthentication("Bearer").AddJwtBearer();
+
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApiCatalagoContext>().AddDefaultTokenProviders();
+
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddAutoMapper(cfg => { }, typeof(ProdutoDTOMappingProfile));
 
 builder.Services
     .AddControllers(
@@ -70,7 +72,38 @@ builder.Services
 
 builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration { logLevel = LogLevel.Information }));
 
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiCatalago", Version = "v1" });
+
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Bearer Token ",
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer",
+                }
+            },
+            new string[] { }
+        }
+    });
+});
 builder.Services.AddOpenApi();
+
+
 
 var app = builder.Build();
 
@@ -80,13 +113,14 @@ if (app.Environment.IsDevelopment())
 {
 
     app.MapOpenApi();
-    app.UseSwaggerUI(options => options.SwaggerEndpoint("/openapi/v1.json", "Weather API"));
+    app.UseSwaggerUI(options => options.SwaggerEndpoint("/openapi/v1.json", "ApiCatalago"));
     app.UseDeveloperExceptionPage();
     app.ConfigureExceptionHandler();
 }
 
 
 app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();

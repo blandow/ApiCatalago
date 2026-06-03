@@ -6,6 +6,7 @@ using ApiCatalago.Models;
 using ApiCatalago.Pagination;
 using ApiCatalago.Repositories;
 using MathNet.Numerics.Distributions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -48,6 +49,7 @@ namespace ApiCatalago.Controllers
 
         [HttpGet]
         [ServiceFilter(typeof(APILoggingFilter))]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
        
         public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
         {
