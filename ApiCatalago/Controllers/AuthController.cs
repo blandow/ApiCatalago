@@ -20,14 +20,83 @@ namespace ApiCatalago.Controllers
         private readonly UserManager<ApplicationUser> _userManeger;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _configuration;
+        private readonly ILogger<CategoriasController> _logger;
 
-        public AuthController(ITokenService tokenService, UserManager<ApplicationUser> userManeger, RoleManager<IdentityRole> roleManager, IConfiguration configuration)
+        public AuthController(ITokenService tokenService, UserManager<ApplicationUser> userManeger, RoleManager<IdentityRole> roleManager, IConfiguration configuration, ILogger<CategoriasController> logger)
         {
             _tokenService = tokenService;
             _userManeger = userManeger;
             _roleManager = roleManager;
             _configuration = configuration;
+            _logger = logger;
         }
+
+        [HttpPost]
+        [Route("CreateRole")]
+        public async Task<IActionResult> CreateRole (string roleName)
+        {
+            var roleExist = await _roleManager.RoleExistsAsync(roleName);
+
+            if (!roleExist)
+            {
+                var roleResult = await _roleManager.CreateAsync(new IdentityRole(roleName));
+
+                if (roleResult.Succeeded)
+                {
+                    _logger.LogInformation("Role adicionada: " + roleName);
+                    return StatusCode(StatusCodes.Status200OK,new ResponseDTO {
+                        Status = "Success",
+                        Message = "Role created successfully!"
+                    });
+                }
+                else
+                {
+                    _logger.LogWarning("Erro ao criar role: " + roleName);
+                    return StatusCode(StatusCodes.Status400BadRequest,
+                        new ResponseDTO { Status = "Error", Message = $"Error creating role {roleName}" });
+                }
+
+                }
+            
+            return StatusCode(StatusCodes.Status400BadRequest,
+                new ResponseDTO { Status = "Error", Message = $"Role {roleName} already exists!" });
+        }
+
+        [HttpPost]
+        [Route("AddUserToRole")]
+        public async Task<IActionResult> AddUserToRole(string email, string roleName)
+        {
+            var user = await _userManeger.FindByEmailAsync(email);
+
+            if (user != null)
+            {
+                var result = await _userManeger.AddToRoleAsync(user, roleName);
+
+                if (result.Succeeded)
+                {
+                    _logger.LogInformation($"user {user.UserName} email {email} added to {roleName} !");
+                    return StatusCode(StatusCodes.Status200OK,
+                        new ResponseDTO
+                        {
+                            Status = "Success",
+                            Message = $"email {user.Email} added to {roleName}"
+                        });
+                }
+                else
+                {
+                    _logger.LogError($"unable to add {user.Email} to {roleName}");
+                    return StatusCode(StatusCodes.Status400BadRequest, new ResponseDTO
+                    {
+                        Status = "Error",
+                        Message = $"Error: unable to add user {user.UserName} - {user.Email} to the {roleName} role"
+                    });
+                }
+            }
+
+            _logger.LogError($"Unable to find user {email}");
+                return BadRequest(new { error = "Unable to find user" });
+        }
+
 
         [HttpPost]
         [Route("login")]
@@ -42,6 +111,7 @@ namespace ApiCatalago.Controllers
                 { 
                     new Claim(ClaimTypes.Name, user.UserName!),
                     new Claim(ClaimTypes.Email, user.Email!),
+                    new Claim("id",user.UserName!),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                 };
 

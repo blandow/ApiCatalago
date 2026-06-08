@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Security.Claims;
 using System.Text;
 using System.Text.Json.Serialization;
 
@@ -54,6 +55,18 @@ builder.Services.AddAuthentication(options =>
         ValidIssuer = builder.Configuration["Jwt:ValidIssuer"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
     };
+});
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("adminOnly", policy => policy.RequireRole("Admin"));
+    options.AddPolicy("superAdminOnly", policy => policy.RequireRole("Admin").RequireClaim("id", "felipeAdmin"));
+    options.AddPolicy("userOnly", policy => policy.RequireRole("User"));
+    
+    //politica customizada
+    options.AddPolicy("exclusivePolicyOnly", policy => {
+        policy.RequireAssertion(context => context.User.HasClaim(claim => claim.Type == "id"
+        && claim.Value == "felipeAdmin") || context.User.IsInRole("superAdmin"));
+    });
 });
 
 //builder.Services.AddAuthentication("Bearer").AddJwtBearer();

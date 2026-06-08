@@ -123,6 +123,7 @@ namespace ApiCatalago.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize(Policy = "adminOnly", AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<CategoriaDTO>> Delete(int id)
         {
 

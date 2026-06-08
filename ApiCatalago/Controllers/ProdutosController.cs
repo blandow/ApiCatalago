@@ -1,16 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ApiCatalago.DTO;
 using ApiCatalago.Models;
+using ApiCatalago.Pagination;
 using ApiCatalago.Repositories;
 using AutoMapper;
-using ApiCatalago.DTO;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
-using ApiCatalago.Pagination;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using MathNet.Numerics;
-using X.PagedList.EF;
 using X.PagedList;
-
-
 
 namespace ApiCatalago.Controllers
 {
@@ -63,6 +61,7 @@ namespace ApiCatalago.Controllers
         }
 
         [HttpGet]
+        [Authorize("userOnly", AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<ProdutoDTO>>> Get()
         {
             var produtos = await _UoW.ProdutoRepository.GetAllAsync();
@@ -100,6 +99,7 @@ namespace ApiCatalago.Controllers
 
 
         [HttpPost]
+        [Authorize(Policy = "superAdminOnly", AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<ProdutoDTO>> Post(ProdutoDTO produtoDTO)
         {
 
@@ -169,6 +169,7 @@ namespace ApiCatalago.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize(Policy = "exclusivePolicyOnly", AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<ProdutoDTO>> Delete(int id)
         {
 
