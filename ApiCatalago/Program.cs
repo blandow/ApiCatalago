@@ -116,6 +116,11 @@ builder.Services.AddSwaggerGen(c =>
 });
 builder.Services.AddOpenApi();
 
+var PoliticaComOrigem = "_origensComAcessoPermitido";
+builder.Services.AddCors(options => options.AddPolicy(name: PoliticaComOrigem,
+    policy => {
+        policy.WithOrigins("https://apirequest.io").WithMethods("GET","POST");
+    }));
 
 
 var app = builder.Build();
@@ -133,6 +138,11 @@ if (app.Environment.IsDevelopment())
 
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+
+app.UseCors(PoliticaComOrigem);
+
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
