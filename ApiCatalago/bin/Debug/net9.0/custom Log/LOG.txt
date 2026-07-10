@@ -1673,3 +1673,248 @@ FROM `Produtos` AS `p`
 Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT `p`.`Id`, `p`.`CategoriaId`, `p`.`DataCadastro`, `p`.`Descricao`, `p`.`Estoque`, `p`.`ImagemUrl`, `p`.`Nome`, `p`.`Preco`
 FROM `Produtos` AS `p`
+Warning: WebRootPathNotFound - 16 ##### --> The WebRootPath was not found: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\wwwroot. Static files may be unavailable.
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Warning: WebRootPathNotFound - 16 ##### --> The WebRootPath was not found: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\wwwroot. Static files may be unavailable.
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:39:16
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (151ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:39:19
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:39:23
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:39:24
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:39:34
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:39:34
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:39:53
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:39:53
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:39:58
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:39:58
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:40:03
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:40:03
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:40:08
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:40:08
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:41:33
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:41:33
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:41:38
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:41:38
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Warning: WebRootPathNotFound - 16 ##### --> The WebRootPath was not found: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\wwwroot. Static files may be unavailable.
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:42:52
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (48ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:42:55
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:42:57
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:42:57
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:43:01
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:43:02
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:43:07
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:43:07
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Warning: WebRootPathNotFound - 16 ##### --> The WebRootPath was not found: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\wwwroot. Static files may be unavailable.
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:44:29
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (48ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:44:32
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:44:34
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:44:34
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Information:  - 0 ##### --> Log teste inicial on action executing
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:44:38
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context path: /Categorias
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`ImagemUrl`, `c`.`Nome`
+FROM `Categorias` AS `c`
+Information:  - 0 ##### --> Log teste inicial on action executed
+Information:  - 0 ##### --> __________________________________________________________
+Information:  - 0 ##### --> 10/07/2026 19:44:38
+Information:  - 0 ##### --> Model State: True
+Information:  - 0 ##### --> Http context status: 200
+Warning: WebRootPathNotFound - 16 ##### --> The WebRootPath was not found: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\wwwroot. Static files may be unavailable.
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Warning:  - 0 ##### --> You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (68ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`CategoriaId`, `p`.`DataCadastro`, `p`.`Descricao`, `p`.`Estoque`, `p`.`ImagemUrl`, `p`.`Nome`, `p`.`Preco`
+FROM `Produtos` AS `p`
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - 20101 ##### --> Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`CategoriaId`, `p`.`DataCadastro`, `p`.`Descricao`, `p`.`Estoque`, `p`.`ImagemUrl`, `p`.`Nome`, `p`.`Preco`
+FROM `Produtos` AS `p`

@@ -4,16 +4,19 @@ using ApiCatalago.Extensions;
 using ApiCatalago.Filters;
 using ApiCatalago.Logging;
 using ApiCatalago.Models;
+using ApiCatalago.RateLimitOptions;
 using ApiCatalago.Repositories;
 using ApiCatalago.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json.Serialization;
+using System.Threading.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 var secretKey = builder.Configuration["Jwt:SecretKey"] ?? throw new ArgumentException("Secret key is Invalid");
@@ -36,6 +39,38 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 
 builder.Services.AddAuthorization();
 
+var rateOptions = new RateLimitingGlobalOptions();
+
+builder.Configuration.GetSection(RateLimitingGlobalOptions._name).Bind(rateOptions);
+
+
+builder.Services.AddRateLimiter(rateOpt => 
+{
+    rateOpt.AddFixedWindowLimiter("FixedPolicyRate", options => 
+    {
+        options.PermitLimit = rateOptions.PermitLimit;
+        options.QueueLimit = rateOptions.QueueLimit;
+        options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+        options.Window = TimeSpan.FromSeconds(rateOptions.Window);
+    });
+    rateOpt.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+});
+
+builder.Services.AddRateLimiter(options => {
+
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+
+    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(httpContext => RateLimitPartition.GetFixedWindowLimiter(
+        partitionKey: httpContext.User.Identity?.Name ?? httpContext.Request.Host.ToString(), 
+        factory: partition => new FixedWindowRateLimiterOptions {
+            AutoReplenishment = rateOptions.AutoReplenishment,
+            PermitLimit = rateOptions.PermitLimit,
+            QueueLimit = rateOptions.QueueLimit,
+            Window = TimeSpan.FromSeconds(rateOptions.Window)
+
+        }));
+});
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -56,6 +91,7 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
     };
 });
+
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("adminOnly", policy => policy.RequireRole("Admin"));
@@ -140,6 +176,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+
+app.UseRateLimiter();
 
 app.UseCors(PoliticaComOrigem);
 

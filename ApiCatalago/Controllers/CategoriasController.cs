@@ -9,6 +9,7 @@ using MathNet.Numerics.Distributions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Data;
@@ -20,6 +21,7 @@ namespace ApiCatalago.Controllers
 {
     [Route("[controller]")]
     [ApiController]
+    [EnableRateLimiting("FixedPolicyRate")]
     public class CategoriasController : ControllerBase
     {
         private readonly IUnitOfWork _UoW;
@@ -49,7 +51,7 @@ namespace ApiCatalago.Controllers
 
         [HttpGet]
         [ServiceFilter(typeof(APILoggingFilter))]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
        
         public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
         {
