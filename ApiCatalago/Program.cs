@@ -7,6 +7,7 @@ using ApiCatalago.Models;
 using ApiCatalago.RateLimitOptions;
 using ApiCatalago.Repositories;
 using ApiCatalago.Services;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.RateLimiting;
@@ -69,6 +70,22 @@ builder.Services.AddRateLimiter(options => {
             Window = TimeSpan.FromSeconds(rateOptions.Window)
 
         }));
+});
+
+//padrão query string
+builder.Services.AddApiVersioning(o => 
+{
+    o.DefaultApiVersion = new ApiVersion(1, 0);
+    o.AssumeDefaultVersionWhenUnspecified = true;
+    o.ReportApiVersions = true;
+    //combina os tipos url e querystring de versionamento
+    o.ApiVersionReader = ApiVersionReader.Combine(
+        new QueryStringApiVersionReader(),
+        new UrlSegmentApiVersionReader());
+}).AddApiExplorer(options => 
+{
+    options.GroupNameFormat = "'v'VVV";
+    options.SubstituteApiVersionInUrl = true;
 });
 
 builder.Services.AddAuthentication(options =>

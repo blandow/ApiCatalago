@@ -318,3 +318,7 @@ C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\M
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Asp.Versioning.Abstractions.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Asp.Versioning.Http.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Asp.Versioning.Mvc.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Asp.Versioning.Mvc.ApiExplorer.dll
