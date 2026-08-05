@@ -22,6 +22,7 @@ namespace ApiCatalago.Controllers
     [Route("[controller]")]
     [ApiController]
     [EnableRateLimiting("FixedPolicyRate")]
+    [Produces("application/json")]
     public class CategoriasController : ControllerBase
     {
         private readonly IUnitOfWork _UoW;
@@ -48,7 +49,10 @@ namespace ApiCatalago.Controllers
             Response.Headers.Append("F-PaginationCategorias", JsonConvert.SerializeObject(meta));
             return Ok(categorias.toListCategoriaDTOs());
         }
-
+        /// <summary>
+        /// Get a list of Category
+        /// </summary>
+        /// <returns>Return a list of category</returns>
         [HttpGet]
         [ServiceFilter(typeof(APILoggingFilter))]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
@@ -59,7 +63,11 @@ namespace ApiCatalago.Controllers
             return Ok(CategoriaDTOMappingExtentions.toListCategoriaDTOs(categorias));
 
         }
-
+        /// <summary>
+        /// Get a category by Id
+        /// </summary>
+        /// <param name="id"> category Id</param>
+        /// <returns>a single category</returns>
         [HttpGet("{id:int}", Name = "GetCategoriaId")]
         public async Task<ActionResult<CategoriaDTO>> Get(int id)
         {
@@ -92,6 +100,7 @@ namespace ApiCatalago.Controllers
         }
 
         [HttpPost]
+        [ApiConventionMethod(typeof(DefaultApiConventions),nameof(DefaultApiConventions.Post))]
         public async Task<ActionResult<CategoriaDTO>> Post(CategoriaDTO catDTO)
         {
 

@@ -322,3 +322,5 @@ C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\A
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Asp.Versioning.Http.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Asp.Versioning.Mvc.dll
 C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\Asp.Versioning.Mvc.ApiExplorer.dll
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\bin\Debug\net9.0\ApiCatalago.xml
+C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\obj\Debug\net9.0\ApiCatalago.xml
