@@ -1960,3 +1960,9 @@ Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhos
 Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
 Information:  - 0 ##### --> Hosting environment: Development
 Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago
+Warning: WebRootPathNotFound - 16 ##### --> The WebRootPath was not found: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago\wwwroot. Static files may be unavailable.
+Information: ListeningOnAddress - 14 ##### --> Now listening on: https://localhost:7084
+Information: ListeningOnAddress - 14 ##### --> Now listening on: http://localhost:5130
+Information:  - 0 ##### --> Application started. Press Ctrl+C to shut down.
+Information:  - 0 ##### --> Hosting environment: Development
+Information:  - 0 ##### --> Content root path: C:\Users\felip\source\repos\Curso API\ApiCatalago\ApiCatalago

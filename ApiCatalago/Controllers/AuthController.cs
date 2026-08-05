@@ -1,5 +1,4 @@
-﻿
-using ApiCatalago.DTO;
+﻿using ApiCatalago.DTO;
 using ApiCatalago.Models;
 using ApiCatalago.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -8,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-
+using Microsoft.AspNetCore.Http;
 
 namespace ApiCatalago.Controllers
 {
@@ -34,6 +33,9 @@ namespace ApiCatalago.Controllers
 
         [HttpPost]
         [Route("CreateRole")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesDefaultResponseType]
         public async Task<IActionResult> CreateRole (string roleName)
         {
             var roleExist = await _roleManager.RoleExistsAsync(roleName);
@@ -45,7 +47,8 @@ namespace ApiCatalago.Controllers
                 if (roleResult.Succeeded)
                 {
                     _logger.LogInformation("Role adicionada: " + roleName);
-                    return StatusCode(StatusCodes.Status200OK,new ResponseDTO {
+                    return StatusCode(StatusCodes.Status200OK, new ResponseDTO
+                    {
                         Status = "Success",
                         Message = "Role created successfully!"
                     });
@@ -65,6 +68,9 @@ namespace ApiCatalago.Controllers
 
         [HttpPost]
         [Route("AddUserToRole")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesDefaultResponseType]
         public async Task<IActionResult> AddUserToRole(string email, string roleName)
         {
             var user = await _userManeger.FindByEmailAsync(email);
@@ -101,6 +107,9 @@ namespace ApiCatalago.Controllers
 
         [HttpPost]
         [Route("login")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesDefaultResponseType]
         public async Task<IActionResult> Login([FromBody] LoginModelDTO model)
         {
             var user = await _userManeger.FindByNameAsync(model.UserName!);
@@ -186,6 +195,7 @@ namespace ApiCatalago.Controllers
 
         [HttpPost]
         [Route("refreshToken")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> RefreshToken(TokenModelDTO tokenModel)
         {
             if(tokenModel is null)
@@ -230,6 +240,9 @@ namespace ApiCatalago.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [HttpPost]
         [Route("revoke/{username}")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesDefaultResponseType]
         public async Task<IActionResult> Revoke(string username)
         {
             var user = await _userManeger.FindByNameAsync(username);
