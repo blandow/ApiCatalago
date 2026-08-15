@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{85F3D672-4DF0-40AC-93FE-3E17277737F3}|ApiCatalogoxUnitTests\\ApiCatalogoxUnitTests.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalogoxunittests\\unittests\\produtosunittestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F3D672-4DF0-40AC-93FE-3E17277737F3}|ApiCatalogoxUnitTests\\ApiCatalogoxUnitTests.csproj|solutionrelative:apicatalogoxunittests\\unittests\\produtosunittestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85F3D672-4DF0-40AC-93FE-3E17277737F3}|ApiCatalogoxUnitTests\\ApiCatalogoxUnitTests.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalogoxunittests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F3D672-4DF0-40AC-93FE-3E17277737F3}|ApiCatalogoxUnitTests\\ApiCatalogoxUnitTests.csproj|solutionrelative:apicatalogoxunittests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\apicatalago.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\apicatalago.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|solutionrelative:apicatalago\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2B2F2445-D03D-477A-BE03-6C20C051C526}|ApiCatalago\\ApiCatalago.csproj|c:\\users\\felip\\source\\repos\\curso api\\apicatalago\\apicatalago\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,19 +58,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CustomLogger.cs",
-              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Logging\\CustomLogger.cs",
-              "RelativeDocumentMoniker": "ApiCatalago\\Logging\\CustomLogger.cs",
-              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Logging\\CustomLogger.cs",
-              "RelativeToolTip": "ApiCatalago\\Logging\\CustomLogger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAARAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ProdutosUnitTestsController.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalogoxUnitTests\\UnitTests\\ProdutosUnitTestsController.cs",
+              "RelativeDocumentMoniker": "ApiCatalogoxUnitTests\\UnitTests\\ProdutosUnitTestsController.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalogoxUnitTests\\UnitTests\\ProdutosUnitTestsController.cs",
+              "RelativeToolTip": "ApiCatalogoxUnitTests\\UnitTests\\ProdutosUnitTestsController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA0wCEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-05T20:49:11.807Z"
+              "WhenOpened": "2026-08-15T21:58:47.384Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalogoxUnitTests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "ApiCatalogoxUnitTests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalogoxUnitTests\\UnitTest1.cs",
+              "RelativeToolTip": "ApiCatalogoxUnitTests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:53:40.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Controllers\\AuthController.cs",
@@ -75,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ProdutosController.cs",
               "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Controllers\\ProdutosController.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Controllers\\ProdutosController.cs",
@@ -88,25 +110,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CategoriasController.cs",
               "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Controllers\\CategoriasController.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Controllers\\CategoriasController.cs",
               "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Controllers\\CategoriasController.cs",
               "RelativeToolTip": "ApiCatalago\\Controllers\\CategoriasController.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAqwGYAAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAA8wGYAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-05T20:13:08.641Z"
+              "WhenOpened": "2026-08-05T20:13:08.641Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ApiCatalago.csproj",
               "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\ApiCatalago.csproj",
               "RelativeDocumentMoniker": "ApiCatalago\\ApiCatalago.csproj",
               "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\ApiCatalago.csproj",
               "RelativeToolTip": "ApiCatalago\\ApiCatalago.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-08-05T19:47:34.566Z",
               "EditorCaption": ""
@@ -114,6 +137,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "CustomLogger.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Logging\\CustomLogger.cs",
+              "RelativeDocumentMoniker": "ApiCatalago\\Logging\\CustomLogger.cs",
+              "ToolTip": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Logging\\CustomLogger.cs",
+              "RelativeToolTip": "ApiCatalago\\Logging\\CustomLogger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T20:49:11.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "TesteV1Controller.cs",
               "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Controllers\\TesteV1Controller.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Controllers\\TesteV1Controller.cs",
@@ -121,11 +157,12 @@
               "RelativeToolTip": "ApiCatalago\\Controllers\\TesteV1Controller.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-27T18:40:08.117Z"
+              "WhenOpened": "2026-07-27T18:40:08.117Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Program.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Program.cs",
@@ -133,11 +170,12 @@
               "RelativeToolTip": "ApiCatalago\\Program.cs",
               "ViewState": "AgIAAIQAAAAAAAAAAAAiwJAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T19:25:16.669Z"
+              "WhenOpened": "2026-07-10T19:25:16.669Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "TesteV2Controller.cs",
               "DocumentMoniker": "C:\\Users\\felip\\source\\repos\\Curso API\\ApiCatalago\\ApiCatalago\\Controllers\\TesteV2Controller.cs",
               "RelativeDocumentMoniker": "ApiCatalago\\Controllers\\TesteV2Controller.cs",
@@ -145,7 +183,8 @@
               "RelativeToolTip": "ApiCatalago\\Controllers\\TesteV2Controller.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-27T18:45:54.596Z"
+              "WhenOpened": "2026-07-27T18:45:54.596Z",
+              "EditorCaption": ""
             }
           ]
         }
