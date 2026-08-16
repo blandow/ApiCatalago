@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiCatalago</name>
+    </assembly>
+    <members>
+        <member name="M:ApiCatalago.Controllers.CategoriasController.Get">
+            <summary>
+            Get a list of Category
+            </summary>
+            <returns>Return a list of category</returns>
+        </member>
+        <member name="M:ApiCatalago.Controllers.CategoriasController.Get(System.Int32)">
+            <summary>
+            Get a category by Id
+            </summary>
+            <param name="id"> category Id</param>
+            <returns>a single category</returns>
+        </member>
+        <member name="T:ApiCatalago.Migrations.PrimeiraMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.PrimeiraMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.PrimeiraMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.PrimeiraMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ApiCatalago.Migrations.AnotationMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.AnotationMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.AnotationMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.AnotationMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ApiCatalago.Migrations.AnotationMigrationAjuste">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.AnotationMigrationAjuste.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.AnotationMigrationAjuste.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.AnotationMigrationAjuste.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ApiCatalago.Migrations.PopulaCategorias">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.PopulaCategorias.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.PopulaCategorias.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.PopulaCategorias.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ApiCatalago.Migrations.PopulaProduto">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.PopulaProduto.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.PopulaProduto.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.PopulaProduto.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ApiCatalago.Migrations.CreateIdentityTables">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.CreateIdentityTables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.CreateIdentityTables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiCatalago.Migrations.CreateIdentityTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

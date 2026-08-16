@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging.Abstractions;
 
 namespace ApiCatalogoxUnitTests.UnitTests
 {
-    internal class ProdutosUnitTestsController
+    public class ProdutosUnitTestsController
     {
         public IUnitOfWork repository;
         public IMapper mapper;

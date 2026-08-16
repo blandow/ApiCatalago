@@ -6,6 +6,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using X.PagedList;
@@ -87,9 +88,14 @@ namespace ApiCatalago.Controllers
         }
 
         [HttpGet("Pagination/Produtos/Preco")]
-        public async Task <ActionResult<IEnumerable<ProdutoDTO>>> GetProdutosPreco([FromQuery] ProdutoFiltroPreco produtosParamiters)
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesDefaultResponseType]
+        public async Task<ActionResult<IEnumerable<ProdutoDTO>>> GetProdutosPreco([FromQuery] ProdutoFiltroPreco produtosParamiters)
         {
-            if(produtosParamiters.PrecoCriterio.Trim().ToLower() != "maior" && produtosParamiters.PrecoCriterio.Trim().ToLower() != "menor" && produtosParamiters.PrecoCriterio.Trim().ToLower() != "igual")
+            if (!produtosParamiters.PrecoCriterio.Trim().Equals("maior", StringComparison.OrdinalIgnoreCase)
+                && !produtosParamiters.PrecoCriterio.Trim().Equals("menor", StringComparison.OrdinalIgnoreCase) 
+                && !produtosParamiters.PrecoCriterio.Trim().Equals("igual", StringComparison.OrdinalIgnoreCase))
             {
                 _logger.LogError("Criterio de preço inválido");
                 return BadRequest("Criterio de preço inválido");
@@ -101,7 +107,10 @@ namespace ApiCatalago.Controllers
 
 
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Authorize(Policy = "superAdminOnly", AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesDefaultResponseType]
         public async Task<ActionResult<ProdutoDTO>> Post(ProdutoDTO produtoDTO)
         {
 
@@ -121,6 +130,9 @@ namespace ApiCatalago.Controllers
         }
 
         [HttpPut("{id:int}")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesDefaultResponseType]
         public async Task<ActionResult<ProdutoDTO>> Put(int id, ProdutoDTO produtoDTO)
         {
             var produtos = await _UoW.ProdutoRepository.GetAsync(p => p.Id == produtoDTO.Id);
@@ -138,6 +150,9 @@ namespace ApiCatalago.Controllers
         }
 
         [HttpPatch("{id}/UpdatePartial")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesDefaultResponseType]
         public async Task<ActionResult<ProdutoDTOUpdateResponse>> Patch(int id, JsonPatchDocument<ProdutoDTOUpdateRequest> produtoDTO)
         {
             if(produtoDTO is null|| id <= 0)
@@ -152,7 +167,6 @@ namespace ApiCatalago.Controllers
                 _logger.LogError($"produto não encontrado");
                 return BadRequest();
             }
-
 
             var produtoReqDTO = _mapper.Map<ProdutoDTOUpdateRequest>(produto);
             produtoDTO.ApplyTo(produtoReqDTO, ModelState);
