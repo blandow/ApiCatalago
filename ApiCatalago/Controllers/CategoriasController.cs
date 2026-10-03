@@ -1,21 +1,15 @@
-﻿using ApiCatalago.Context;
-using ApiCatalago.DTO;
+﻿using ApiCatalago.DTO;
 using ApiCatalago.DTO.Mappings;
 using ApiCatalago.Filters;
 using ApiCatalago.Models;
 using ApiCatalago.Pagination;
 using ApiCatalago.Repositories;
-using MathNet.Numerics.Distributions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
-using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using System.Data;
 using X.PagedList;
-using X.PagedList.EF;
-
 
 namespace ApiCatalago.Controllers
 {
@@ -69,6 +63,9 @@ namespace ApiCatalago.Controllers
         /// <param name="id"> category Id</param>
         /// <returns>a single category</returns>
         [HttpGet("{id:int}", Name = "GetCategoriaId")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
         public async Task<ActionResult<CategoriaDTO>> Get(int id)
         {
 
@@ -118,6 +115,9 @@ namespace ApiCatalago.Controllers
         }
 
         [HttpPut("{id:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesDefaultResponseType]
         public async Task<ActionResult> Put(int id, CategoriaDTO catDTO)
         {
 
@@ -135,6 +135,9 @@ namespace ApiCatalago.Controllers
 
         [HttpDelete("{id:int}")]
         [Authorize(Policy = "adminOnly", AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
         public async Task<ActionResult<CategoriaDTO>> Delete(int id)
         {
 

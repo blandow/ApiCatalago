@@ -6,15 +6,14 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using X.PagedList;
 
 namespace ApiCatalago.Controllers
 {
-    [ApiController]
     [Route("[controller]")]
+    [ApiController]
     [Produces("application/json")]
     [ApiConventionType(typeof(DefaultApiConventions))]
     public class ProdutosController : ControllerBase
@@ -50,6 +49,9 @@ namespace ApiCatalago.Controllers
         }
 
         [HttpGet ("produtos/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
         public async Task<ActionResult<IEnumerable<ProdutoDTO>>> GetProdutosCategoria(int id)
         {
             var produtos = await _UoW.ProdutoRepository.GetProdutosPorCategoriaAsync(id);

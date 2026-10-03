@@ -154,6 +154,9 @@ namespace ApiCatalago.Controllers
         
         [HttpPost]
         [Route("register")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ResponseDTO), StatusCodes.Status500InternalServerError)]
+        [ProducesDefaultResponseType]
         public async Task<IActionResult> Register([FromBody] RegisterModelDTO model)
         {
             var validUser = await _userManeger.FindByNameAsync(model.UserName!);
